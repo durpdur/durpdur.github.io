@@ -3,25 +3,35 @@
     <head>
         <title>Ian's Web Portfolio</title>
         <link rel="stylesheet" type = "text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
     </head>
     <body>
         <header>
             <a href="#" class="logo">Logo</a>
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Home</a></li>
-            </ul>
+            <div class="social-menu">
+                <ul>
+                  <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                  <li><a href=""><i class="fa-regular fa-envelope"></i></a></li>
+                  <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                </ul>
+              </div>
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Home</a></li>
+                </ul>
+            </div>
         </header>
         <section>
             <img src="images/stars.png" id="stars">
             <img src="images/moon.png" id="moon"/>
             <img src="images/mountains_behind.png" id="mountains_behind"/>
             <div id="title_card" class="title_card">
-                <h2 id="title">Hi, I'm Ian</h2>
+                <h2 id="title" class="fade-in">Hi, I'm Ian</h2>
                 <br>
-                <h4 id="subtext">Software Engineer.</h4>
+                <h4 id="subtext" class="fade-in">a Software Engineer.</h4>
             </div>
             <a href="#about" class="btn" id="btn">Explore</a>
             <img src="images/mountains_front.png" id="mountains_front">
@@ -70,7 +80,7 @@
                 moon.style.top = value * 1.5 + 'px';
                 moon.style.left = value * 2 + 'px';
                 mountains_behind.style.top = value * 1.05 + 'px';
-                title_card.style.top = value * 0.7 + 'px';
+                title_card.style.transform = `translateY(${value * 0.7}px)`;
                 mountains_front.style.top = value * 0 + 'px';
                 btn.style.marginTop = value * 0.8 + 'px';
                 header.style.marginTop = value * 0.5 + 'px';

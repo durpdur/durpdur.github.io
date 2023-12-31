@@ -103,8 +103,8 @@ section img#mountains_front {
 .title_card {
     position: absolute;
     justify-content: center;
+    top: 31vh;
     align-items: center;
-    transform: translateY(30vh);
     display: flex;
     flex-direction: column;
 }
@@ -125,6 +125,41 @@ section img#mountains_front {
     font-size: 4vw;
     z-index: 9;
 }
+
+.fade-in {
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+  
+#title {
+    animation-name: fadeInTitle;
+    animation-delay: 0.5s; /* Delay the animation for the title */
+}
+  
+#subtext {
+    animation-name: fadeInSubtext;
+    animation-delay: 1.5s; /* Delay the animation for the subtext */
+}
+  
+@keyframes fadeInTitle {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+  
+@keyframes fadeInSubtext {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+  
 
 .btn {
     height: 40px;
