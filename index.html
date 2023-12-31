@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Scrolling Website</title>
+        <title>Ian's Web Portfolio</title>
         <link rel="stylesheet" type = "text/css" href="style.css">
     </head>
     <body>
@@ -15,7 +15,66 @@
             </ul>
         </header>
         <section>
-            
+            <img src="images/stars.png" id="stars">
+            <img src="images/moon.png" id="moon"/>
+            <img src="images/mountains_behind.png" id="mountains_behind"/>
+            <div id="title_card" class="title_card">
+                <h2 id="title">Hi, I'm Ian</h2>
+                <br>
+                <h4 id="subtext">Software Engineer.</h4>
+            </div>
+            <a href="#about" class="btn" id="btn">Explore</a>
+            <img src="images/mountains_front.png" id="mountains_front">
         </section>
+        <div class="about" id="about">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet, 
+                consectetur adipisicing elit. Eum, nesciunt officiis, 
+                cum fuga libero eaque accusantium consequuntur culpa praesentium 
+                optio, a cupiditate corrupti similique porro at quasi fugit. Magnam, error.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Accusamus, esse quia placeat amet repudiandae optio, officia doloribus 
+                culpa nihil consequatur aut. Ullam reiciendis, beatae excepturi veniam provident 
+                incidunt. Sunt iure beatae laudantium fuga earum, impedit nostrum neque nisi 
+                cupiditate magnam reiciendis nobis. In veniam vitae, nulla et, officiis nisi 
+                iure, provident perferendis ratione alias minima rem corrupti! Expedita dolor 
+                architecto, alias, vel repudiandae totam reprehenderit error fuga repellat 
+                eligendi dignissimos provident excepturi debitis quas rem accusantium, 
+                ex doloribus tempora optio inventore sint illum.<br><br> Quae, asperiores nostrum? 
+                Nam neque illum accusantium alias dolorum aut! Voluptatum dolorum aspernatur 
+                neque libero doloremque ducimus quaerat earum eos quasi. Ipsum ut perspiciatis 
+                pariatur fuga at tenetur ab ratione iusto nisi quas. Adipisci maxime delectus 
+                odit maiores accusamus omnis obcaecati repellat cum tempora libero deleniti 
+                quaerat atque, repellendus optio! Nobis commodi nemo magni, aperiam alias sunt 
+                corporis dignissimos sint debitis hic voluptatibus distinctio necessitatibus 
+                minima similique dolorem illum! Quis non asperiores nihil laborum reprehenderit 
+                ex, rerum ipsam vitae cumque consectetur itaque animi consequatur cupiditate repudiandae voluptate hic est dicta 
+                corporis assumenda dolorum ab incidunt. Mollitia aspernatur architecto voluptatum
+                ab corporis quo id fugiat, repudiandae eligendi earum quia, molestiae placeat similique 
+                quasi exercitationem itaque! Dignissimos, in delectus? 
+            </p>
+        </div>
+
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let title_card = document.getElementById('title_card');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.7 + 'px';
+                moon.style.top = value * 1.5 + 'px';
+                moon.style.left = value * 2 + 'px';
+                mountains_behind.style.top = value * 1.05 + 'px';
+                title_card.style.top = value * 0.7 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                btn.style.marginTop = value * 0.8 + 'px';
+                header.style.marginTop = value * 0.5 + 'px';
+            })
+        </script>
     </body>
 </html>
