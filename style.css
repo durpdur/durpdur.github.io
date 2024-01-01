@@ -26,35 +26,103 @@ header {
     z-index: 10000;
 }
 
-header .logo {
-    color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.social-menu ul {
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
-header ul {
+.social-menu ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.social-menu ul li .fa {
+    color: #2b1055;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+}
+
+.social-menu ul li .fa:hover {
+    color: #ffffff;
+}
+
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+
+.social-menu ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+    background-color: #5c3675;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: -250px;
+    padding: 15px;
+    background-color: #2b1055;
+    color: #fff;
+    border-radius: 10px;
+    z-index: 9999;
+    font-size: 18px;
+    width: auto;
+    text-align: center;
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        right: -300px;
+    }
+    to {
+        right: 20px;
+    }
+}
+@keyframes slideOut {
+    from {
+        right: 20px;
+    }
+    to {
+        right: -360px;
+    }
+}
+
+.nav-bar ul {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-header ul li {
+.nav-bar ul li {
     list-style: none;
     margin-left: 20px;
 }
 
-header ul li a {
+.nav-bar ul li a {
     text-decoration: none;
     padding: 6px 15px;
     color: #fff;
     border-radius: 20px;
 }
 
-header ul li a:hover , 
-header ul li a.active {
+.nav-bar ul li a:hover , 
+.nav-bar ul li a.active {
     background: #fff;
     color: #2b1055;
 }

@@ -3,24 +3,25 @@
     <head>
         <title>Ian's Web Portfolio</title>
         <link rel="stylesheet" type = "text/css" href="style.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/33d44a53ed.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
-            <a href="#" class="logo">Logo</a>
             <div class="social-menu">
                 <ul>
-                  <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
-                  <li><a href=""><i class="fa-regular fa-envelope"></i></a></li>
-                  <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/ian-du-172115245/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a onclick="copyEmailToClipboard()"><i class="fa fa-envelope" id="copyEmailButton"></i></a></li>
+                    <li><a href="https://github.com/durpdur" target="_blank"><i class="fa fa-github"></i></a></li>
                 </ul>
-              </div>
+            </div>
+            <div id="popup" class="popup">Email copied! [xingrandu@gmail.com]</div>
             <div class="nav-bar">
                 <ul>
                     <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#Work">Work</a></li>
+                    <li><a href="#Projects">Projects</a></li>
                 </ul>
             </div>
         </header>
@@ -64,6 +65,9 @@
                 quasi exercitationem itaque! Dignissimos, in delectus? 
             </p>
         </div>
+        <div class="Skills" id="Skills"></div>
+        <div class="Work" id="Work"></div>
+        <div class="Projects" id="Projects"></div>
 
         <script>
             let stars = document.getElementById('stars');
@@ -85,6 +89,28 @@
                 btn.style.marginTop = value * 0.8 + 'px';
                 header.style.marginTop = value * 0.5 + 'px';
             })
+
+            function copyEmailToClipboard() {
+                const email = "xingrandu@gmail.com";
+                const tempInput = document.createElement("input");
+                tempInput.value = email;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand("copy");
+                document.body.removeChild(tempInput);
+
+                const popup = document.getElementById("popup");
+                popup.style.display = "block";
+                popup.style.animation = "slideIn 0.5s forwards";
+
+                setTimeout(function() {
+                    popup.style.animation = "slideOut 0.5s forwards";
+                    
+                    setTimeout(function() {
+                        popup.style.display = "none";
+                    }, 500); 
+                }, 2000); 
+            }
         </script>
     </body>
 </html>
