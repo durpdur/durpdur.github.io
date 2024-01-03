@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Ian's Web Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type = "text/css" href="style.css">
         <script src="https://kit.fontawesome.com/33d44a53ed.js" crossorigin="anonymous"></script>
     </head>
@@ -17,23 +18,15 @@
             <div id="popup" class="popup">Email copied! [xingrandu@gmail.com]</div>
             <div class="nav-bar">
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#work">Work</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </header>
-        <nav class="side-nav">
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#projects">Projects</a></li>
-            </ul>
-        </nav>
+        <button class="topbtn" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
         <section class="background">
             <img src="images/stars.png" id="stars">
             <img src="images/moon.png" id="moon"/>
@@ -86,6 +79,9 @@
 
         </section>
 
+        <section class="contact" id="contact">
+
+        </section>
         <script>
             let stars = document.getElementById('stars');
             let moon = document.getElementById('moon');
@@ -95,8 +91,13 @@
             let mountains_front = document.getElementById('mountains_front');
             let header = document.querySelector('header');
 
+            let aboutSection = document.getElementById('about');
+            let topbtn = document.querySelector('.topbtn');
+            const aboutTop = aboutSection.offsetTop;
+
             window.addEventListener('scroll', function(){
                 let value = window.scrollY;
+
                 stars.style.left = value * 0.7 + 'px';
                 moon.style.top = value * 1.5 + 'px';
                 moon.style.left = value * 2 + 'px';
@@ -105,6 +106,12 @@
                 mountains_front.style.top = value * 0 + 'px';
                 btn.style.marginTop = value * 0.8 + 'px';
                 header.style.marginTop = value * 0.5 + 'px';
+
+                if (value > aboutTop) {
+                    topbtn.classList.add('show');
+                } else if (value < aboutTop) {
+                    topbtn.classList.remove('show');
+                }
             })
 
             function copyEmailToClipboard() {
@@ -127,6 +134,13 @@
                         popup.style.display = "none";
                     }, 500); 
                 }, 2000); 
+            }
+
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
             }
         </script>
     </body>
