@@ -232,18 +232,19 @@ header {
     }
 }
 
-/* Skills Section */
-  
-.btn {
-    height: 40px;
-    position: absolute;
-    text-decoration: none;
+/* Explore Button Section */
+
+.expbtn {
     display: inline-block;
-    padding: 8px 30px;
-    border-radius: 40px;
-    background: #fff;
-    color: #2b1055;
     font-size: 1.5em;
+    color: #2b1055;
+    padding: 0.3em 1.3em;
+    margin: none;
+    border-radius: 1.2em;
+    border: none;
+    outline: none;
+    background: #fff;
+    cursor: pointer;
     z-index: 9;
     transform: translateY(100px);
 }
