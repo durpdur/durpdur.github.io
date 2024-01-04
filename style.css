@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100,200,300,400,500,600,700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
 }
 
 body {
@@ -14,6 +17,8 @@ body {
     background: linear-gradient(#2b1055, #7597de);
     margin: 0;
 }
+
+/* Header */
 
 header {
     position: absolute;
@@ -26,6 +31,8 @@ header {
     align-items: center;
     z-index: 10000;
 }
+
+/* Social Menu */
 
 .social-menu ul {
     position: absolute;
@@ -70,6 +77,8 @@ header {
     background-color: #5c3675;
 }
 
+/* Pop-up message */
+
 .popup {
     display: none;
     position: fixed;
@@ -103,6 +112,8 @@ header {
     }
 }
 
+/* Top nav-bar */
+
 .nav-bar ul {
     display: flex;
     justify-content: center;
@@ -126,6 +137,8 @@ header {
     background: #fff;
     color: #2b1055;
 }
+
+/* Background animation */
 
 .background{
     position: relative;
@@ -168,6 +181,8 @@ header {
     max-height: 100%;
 }
 
+/* Title card */
+
 .title_card {
     position: absolute;
     justify-content: center;
@@ -178,7 +193,6 @@ header {
 }
 
 .title_card #title {
-    font-family: 'Poppins', sans-serif;
     color: #fff;
     white-space: nowrap;
     font-size: 8vw;
@@ -186,7 +200,6 @@ header {
 }
 
 .title_card #subtext {
-    font-family : 'Poppins', sans-serif;
     font-weight: 200;
     color: #fff;
     white-space: nowrap;
@@ -201,16 +214,16 @@ header {
 }
   
 #title {
-    animation-name: fadeInTitle;
-    animation-delay: 0.5s; /* Delay the animation for the title */
+    animation-name: fadeIn;
+    animation-delay: 0.5s; 
 }
   
 #subtext {
-    animation-name: fadeInSubtext;
-    animation-delay: 1.5s; /* Delay the animation for the subtext */
+    animation-name: fadeIn;
+    animation-delay: 1.5s; 
 }
   
-@keyframes fadeInTitle {
+@keyframes fadeIn {
     from {
       opacity: 0;
     }
@@ -218,17 +231,9 @@ header {
       opacity: 1;
     }
 }
-  
-@keyframes fadeInSubtext {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-}
-  
 
+/* Skills Section */
+  
 .btn {
     height: 40px;
     position: absolute;
@@ -243,6 +248,8 @@ header {
     transform: translateY(100px);
 }
 
+/* About Section */
+
 .about {
     position: relative;
     padding: 100px;
@@ -256,11 +263,12 @@ header {
 }
 
 .about p {
-    font-family: 'Poppins', sans-serif;
     font-weight: 100;
     font-size: 1.2em;
     color: #fff;
 }
+
+/* Skills Section */
 
 .skills {
     position: relative;
@@ -306,20 +314,22 @@ header {
     }
 }
 
+/* Back to top button */
+
 .topbtn {
     display:none;
     position: fixed;
     bottom: -40px;
     right: 20px;
     padding: 10px;
-    background-color: #6279be;
+    background-color: #311a5e;
     color: #fff;
     border: none;
     cursor: pointer;
     z-index: 9999;
     width: 60px;
     height: 60px;
-    border-radius: 50%;
+    border-radius: 30%;
     font-size: 24px;
     animation: slideOut 1s forwards;
 }
