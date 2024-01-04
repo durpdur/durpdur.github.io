@@ -26,7 +26,11 @@
                 </ul>
             </div>
         </header>
-        <button class="topbtn" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
+
+        <button class="topbtn" onclick="scrollToTop()">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+
         <section class="background">
             <img src="images/stars.png" id="stars">
             <img src="images/moon.png" id="moon"/>
@@ -91,9 +95,10 @@
             let mountains_front = document.getElementById('mountains_front');
             let header = document.querySelector('header');
 
-            let aboutSection = document.getElementById('about');
+            let backgroundSection = document.querySelector('.background');
+            let sectionHeight = backgroundSection.offsetHeight / 3;
+
             let topbtn = document.querySelector('.topbtn');
-            const aboutTop = aboutSection.offsetTop;
 
             window.addEventListener('scroll', function(){
                 let value = window.scrollY;
@@ -107,9 +112,9 @@
                 btn.style.marginTop = value * 0.8 + 'px';
                 header.style.marginTop = value * 0.5 + 'px';
 
-                if (value > aboutTop) {
+                if (value > sectionHeight) {
                     topbtn.classList.add('show');
-                } else if (value < aboutTop) {
+                } else {
                     topbtn.classList.remove('show');
                 }
             })
