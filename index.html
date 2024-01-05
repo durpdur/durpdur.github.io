@@ -18,11 +18,11 @@
             <div id="popup" class="popup">Email copied! [xingrandu@gmail.com]</div>
             <div class="nav-bar">
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a onclick="scrollToSection('about', 2000)">About</a></li>
+                    <li><a onclick="scrollToSection('skills', 1500)">Skills</a></li>
+                    <li><a onclick="scrollToSection('work', 1500)">Work</a></li>
+                    <li><a onclick="scrollToSection('projects', 1500)">Projects</a></li>
+                    <li><a onclick="scrollToSection('contact', 1500)">Contact</a></li>
                 </ul>
             </div>
         </header>
@@ -43,7 +43,7 @@
                 <h4 id="subtext" class="fade-in">a Software Engineer.</h4>
             </div>
 
-            <button onclick="scrollToAbout()" class="expbtn" id="expbtn">Explore</button>
+            <button onclick="scrollToSection('about', 2500)" class="expbtn" id="expbtn">Explore</button>
             
         </section>
         <section class="about" id="about">
@@ -59,32 +59,44 @@
         </section>
 
         <section class="skills" id="skills">
-            <div class="skills_grid">
-                <div class="column" id="frontend_column">
+            <h2>Languages & Tech Stacks</h2>
+            <div class="skills_row" id="skill_container">
+                <div class="box hidden">
                     <img src="images/html.png" alt="html_icon">
+                    <p>HTML</p>
+                </div>
+                <div class="box hidden">
                     <img src="images/css.png" alt="css_icon">
+                    <p>CSS</p>
+                </div>
+                <div class="box hidden">
                     <img src="images/js.png" alt="js_icon">
-                    <h1>Front end stuff</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi vel in cum at adipisci repudiandae ex ad expedita exercitationem quasi eaque earum, error minus suscipit nisi aliquam ipsam eveniet optio obcaecati eius, dignissimos nulla! Enim autem animi in quas quibusdam aut ratione quae dolorum expedita delectus temporibus at, labore numquam aperiam vitae soluta, vero dicta quod! Hic earum corrupti ducimus in, consectetur odio numquam sequi, perspiciatis nemo error distinctio repellendus, deleniti quis? Quos soluta deserunt voluptatum corporis facilis, accusantium adipisci incidunt perferendis modi! Optio commodi odit, tempora, fugit nisi magnam quam voluptatem atque porro dolore ad iusto ipsam veritatis praesentium incidunt ratione. Exercitationem repellendus modi, voluptatum minima placeat earum? Ducimus quam velit esse magnam facere inventore animi voluptatibus. Alias magni enim impedit porro molestiae ipsa. Tenetur impedit, omnis ad sequi expedita ipsam doloribus nobis modi dolorem quos enim dicta libero iure ullam error, reiciendis velit distinctio magni maxime, minima eaque. Voluptatibus rerum atque laudantium numquam quisquam! Alias, sunt incidunt! Doloremque labore quidem fuga odit placeat reiciendis, id aliquid a, vel voluptate quasi rem possimus quibusdam obcaecati magnam consectetur repellat voluptatibus. Omnis fuga earum aliquam voluptas porro dolorum veritatis minima accusamus, quam aut pariatur, enim, perspiciatis voluptatem rem quidem est natus!</p>
+                    <p>JavaScript</p>
                 </div>
-                <div class="column" id="backend_column">
-                    <img src="images/python.png" alt="python_icon">
+                <div class="box hidden">
                     <img src="images/java.png" alt="java_icon">
-                    <h1>Backend stuff</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quae exercitationem tempora odit, quisquam quo fugiat eius repellendus aliquam harum ipsum pariatur labore similique atque odio eligendi, perferendis architecto, temporibus in minima fuga. In, vitae? Error laborum explicabo veniam saepe, obcaecati accusamus doloribus sequi! Sequi facilis eaque voluptatem dignissimos assumenda quo est reiciendis architecto provident officia, quae blanditiis quam consequatur at omnis minima labore tempora quibusdam alias vel? Eligendi maxime commodi magnam ea corporis eaque sint beatae voluptatum aspernatur repudiandae. Doloremque, distinctio. Quia quis rem alias molestiae aperiam nam totam quaerat. Commodi, eum aliquam. Fuga blanditiis quis et neque sit magnam incidunt, nisi, eum inventore eius, ratione repellendus vero dicta eos nobis praesentium aliquid aperiam aspernatur culpa! Labore qui harum explicabo illo placeat tempore non assumenda odit temporibus quas eum quidem distinctio voluptatibus, vel libero beatae voluptate quisquam cumque cum eaque delectus nemo sit repellendus quod! Nostrum aliquid assumenda nihil.</p>
+                    <p>Java</p>
                 </div>
-                <div class="column" id="related_column">
-                    <img src="images/postgresql.png" alt="postgresql_icon">
-                    <img src="images/springboot.png" alt="springboot_icon">
-                    <img src="images/git.png" alt="git_icon">
-                    <img src="images/docker.png" alt="docker_icon">
+                <div class="box hidden">
+                    <img src="images/python.png" alt="python_icon">
+                    <p>Python</p>
+                </div>
+                <div class="box hidden">
+                    <img src="images/postgresql.png" alt="postgresql_iocon">
+                    <p>PostgreSQL</p>
+                </div>
+                <div class="box hidden">
+                    <img src="images/nodejs.png" alt="nodejs_icon">
+                    <p>Node.Js</p>
+                </div>
+                <div class="box hidden">
                     <img src="images/react.png" alt="react_icon">
-                    <h1>Related Technologies</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste aspernatur, consectetur dolore ab enim itaque tenetur porro suscipit. Excepturi molestiae, id est quaerat, incidunt magni temporibus beatae accusantium deleniti facilis esse. Deleniti saepe placeat tenetur officia! Quibusdam omnis distinctio amet error assumenda, sequi mollitia est. Deserunt consectetur similique sunt temporibus ipsum, quos tempora dignissimos corrupti assumenda error esse, nobis pariatur, eaque officiis ea in natus perferendis totam iusto qui ipsa ad impedit dolores. Aliquid neque ipsa nulla saepe laborum corrupti dolor quia vel, veniam quasi accusamus? Dolorem esse qui vero? Quo eveniet aut voluptatibus assumenda libero ducimus impedit, maiores ad ullam accusamus facilis delectus laudantium consequuntur consectetur placeat explicabo nulla, corporis ipsam excepturi commodi saepe soluta maxime quasi. Consectetur facilis aspernatur temporibus et illo iusto placeat libero molestiae laborum error fugiat nemo totam architecto eveniet consequatur culpa, impedit quibusdam saepe inventore perferendis! Ut aliquid aperiam quam pariatur? Voluptates, natus minus!</p>
-                    <p>Testing</p>
+                    <p>React</p>
                 </div>
             </div>
+            </div>
         </section>
+
         <section class="work" id="work">
 
         </section>

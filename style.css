@@ -9,6 +9,7 @@ html {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    color: #fff
 }
 
 body {
@@ -47,6 +48,7 @@ header {
 .social-menu ul li {
     list-style: none;
     margin: 0 10px;
+    cursor: pointer;
 }
 
 .social-menu ul li .fa {
@@ -75,6 +77,14 @@ header {
 .social-menu ul li a:hover {
     transform: rotate(0deg) skew(0deg) translate(0, -10px);
     background-color: #5c3675;
+}
+
+@media screen and (max-width: 480px) {
+    .social-menu {
+        top: 100%;
+        left: 100%;
+        transform: translate(50%, 50%);
+    }
 }
 
 /* Pop-up message */
@@ -130,12 +140,19 @@ header {
     padding: 6px 15px;
     color: #fff;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .nav-bar ul li a:hover , 
 .nav-bar ul li a.active {
     background: #fff;
     color: #2b1055;
+}
+
+@media screen and (max-width: 480px) {
+    .nav-bar {
+        display: none;
+    }
 }
 
 /* Background animation */
@@ -207,6 +224,19 @@ header {
     z-index: 9;
 }
 
+@media screen and (max-width: 480px) {
+    .title_card {
+        top: 35vh;
+    }
+
+    .title_card #title {
+        font-size: 15vw;
+    }
+    .title_card #subtext {
+        font-size: 8vw;
+    }
+}
+
 .fade-in {
     opacity: 0;
     animation-duration: 1s;
@@ -258,8 +288,8 @@ header {
 }
 
 .about h2 {
-    font-size: 3.5em;
-    margin-bottom: 10px;
+    font-size: 7vw;
+    margin-bottom: 2vh;
     color: #fff;
 }
 
@@ -269,49 +299,74 @@ header {
     color: #fff;
 }
 
+@media screen and (max-width: 480px) {
+    .about {
+        padding: 4vw;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+    }
+    .about h2 {
+        font-size: 15vw;
+    }
+}
+
 /* Skills Section */
 
 .skills {
+    width: 100%;
     position: relative;
     padding: 100px;
-    background: #1c0522;
-}
-
-.skills_grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 0rem;
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    margin-bottom: 6rem;
-}
-
-.skills_grid .column h1 {
-    color: #fff;
-}
-
-.skills_grid .column p {
-    color: #fff;
-}
-
-.column {
+    background-color: #1c0522;
+    display: flex;
     flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    border-radius: 15px;
-    border: 2px solid #5c3675;
-    margin: 10px;
+    align-items: flex-end;
 }
 
-.column img {
-    width: 50px;
-    height: 50px;
+.skills h2 {
+    font-size: 6vw;
+    padding-bottom: 20px;
 }
 
-@media (max-width: 600px) {
-    .columns {
-        flex-wrap: wrap;
+.skills_row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    border: 2px solid #fff;
+    border-radius: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box img {
+    max-height: 60%;
+    max-width: 60%;
+}
+
+.box p {
+    color: #fff;
+    padding-top: 5px;
+}
+
+@media screen and (max-width: 480px) {
+    .skills {
+        padding: 6vw;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+    }
+    .skills h2 {
+        font-size: 12vw;
+    }
+    .box {
+        height: 25vw;
+        width: 25vw;
     }
 }
 
