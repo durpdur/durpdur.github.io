@@ -5,6 +5,13 @@
     transition: all 1s;
 }
 
+.hiddenRight {
+    opacity: 0;
+    filter:blur(5px);
+    transform: translateX(100%);
+    transition: all 1s;
+}
+
 .fadeIn{
     opacity: 1;
     filter: blur(0);
