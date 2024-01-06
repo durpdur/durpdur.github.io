@@ -91,6 +91,8 @@ function scrollToSection(id, duration_in_milli) {
     requestAnimationFrame(scrollAnimation);
 }
 
+
+ /* Animation for fading in and out */
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry)
