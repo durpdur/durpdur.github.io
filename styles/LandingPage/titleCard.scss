@@ -1,0 +1,63 @@
+/* Title card */
+
+.title_card {
+    position: absolute;
+    justify-content: center;
+    top: 31vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.title_card #title {
+    color: #fff;
+    white-space: nowrap;
+    font-size: 8vw;
+    z-index: 9;
+}
+
+.title_card #subtext {
+    font-weight: 200;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 4vw;
+    z-index: 9;
+}
+
+@media screen and (max-width: 480px) {
+    .title_card {
+        top: 35vh;
+    }
+
+    .title_card #title {
+        font-size: 15vw;
+    }
+    .title_card #subtext {
+        font-size: 8vw;
+    }
+}
+
+#title {
+    animation-name: fadeIn;
+    animation-delay: 0.5s; 
+}
+  
+#subtext {
+    animation-name: fadeIn;
+    animation-delay: 1.5s; 
+}
+  
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}

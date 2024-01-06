@@ -1,0 +1,28 @@
+.about {
+    position: relative;
+    padding: 100px;
+    background: #1c0522;
+}
+
+.about h2 {
+    font-size: 7vw;
+    margin-bottom: 2vh;
+    color: #fff;
+}
+
+.about p {
+    font-weight: 100;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+    .about {
+        padding: 4vw;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+    }
+    .about h2 {
+        font-size: 15vw;
+    }
+}

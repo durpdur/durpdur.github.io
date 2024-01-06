@@ -1,0 +1,32 @@
+/* Top nav-bar */
+
+.nav-bar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.nav-bar ul li a:hover , 
+.nav-bar ul li a.active {
+    background: #fff;
+    color: #2b1055;
+}
+
+@media screen and (max-width: 480px) {
+    .nav-bar {
+        display: none;
+    }
+}

@@ -1,0 +1,28 @@
+.topbtn {
+    display:none;
+    position: fixed;
+    bottom: -40px;
+    right: 20px;
+    padding: 10px;
+    background-color: #311a5e;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 9999;
+    width: 60px;
+    height: 60px;
+    border-radius: 30%;
+    font-size: 24px;
+    animation: slideOut 1s forwards;
+}
+
+/* Hides btn until user enters about section */
+.topbtn.load {
+    display: block;
+}
+
+/* Slide upwards animation */
+.topbtn.show {
+    bottom: 20px;
+    animation: slideIn 1s forwards;
+}
