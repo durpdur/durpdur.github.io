@@ -1,5 +1,6 @@
 @import 'About/about.css';
 @import 'Animations/animations.css';
+@import 'Projects/projects.css';
 @import 'Work/timeline.css';
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100,200,300,400,500,600,700&display=swap");
 @keyframes slideIn {
@@ -142,7 +143,7 @@
   color: #2b1055;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1000px) {
   .nav-bar {
     display: none;
   }
@@ -229,7 +230,7 @@
   z-index: 9;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1150px) {
   .title_card {
     top: 35vh;
   }
@@ -340,7 +341,7 @@
   padding-top: 5px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1150px) {
   .skills {
     padding: 6vw;
     padding-top: 10vh;
@@ -387,113 +388,3 @@ header {
 }
 
 /*# sourceMappingURL=styles.css.map */
-
-.projects {
-  margin:0;
-  background: #210b2a;
-  display: flex;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.projects h1 {
-  margin: 2em;
-  font-size: 5vw;
-}
-
-.projects * {
-  box-sizing: border-box;
-}
-
-.projects p {
-  font-size: 1em;
-  line-height: 23px;
-}
-
-.projects h2 {
-  margin: 0;
-}
-
-.skewed_card {
-  width: 45em;
-  display: flex;
-  background: #1c0522;
-  margin: 2em 0;
-  box-shadow: 0 0 15px #1c0522;
-}
-
-.card_text {
-  padding: 1.5em;
-  width: 50%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  flex-direction: column;
-}
-
-.projects a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.card_img {
-  width: 50%;
-  height: 17em;
-  position: relative;
-  overflow: hidden;
-}
-
-.card_img::before {
-  content: '';
-  position: absolute;
-  left: -6.1em;
-  top: 50%;
-  transform: translateY(-50%) rotate(20deg);
-  background: #1c0522;
-  width: 40%;
-  height: 140%;
-  box-shadow: 0 0 20px #1c0522;
-}
-
-.skewed_left .card_img::before {
-  transform: translateY(-50%) rotate(-20deg);
-  left: initial;
-  right: -6.1em;
-}
-
-img {
-  width: 130%;
-  height: 100%;
-  object-fit: cover;
-}
-
-@media screen and (max-width: 750px) {
-.skewed_card {
-    display: block;
-    width: 20em;
-  }
-
-.card_img, .card_text {
-    width: 100%;
-  }
-
-  img { 
-    width: 160%;
-  }
-
-  .skewed_card .card_img::before {
-    width: 120%;
-    height: 40%;
-    top: -5em;
-    left: 50%;
-    transform: translateX(-50%) rotate(10deg);
-  }
-
-  .skewed_left .card_img::before {
-    transform: translateX(-50%) rotate(-10deg);
-    top: initial;
-    bottom: -5em;
-  }
-}
