@@ -192,21 +192,32 @@
                     <h1>Contact Me</h1>
                     <ul class="info_list">
                         <li>
-                            <span class="icon"><i class="fa fa-envelope"></i></span>
+                            <span class="icon">
+                                <a href="mailto:xingrandu@gmail.com">
+                                    <i class="fa fa-envelope"></i>
+                                </a>
+                            </span>
                             <p>xingrandu@gmail.com</p>
                         </li>
                         <li>
-                            <span class="icon"><i class="fa fa-linkedin"></i></span>
+                            <span class="icon">
+                                <a href="https://www.linkedin.com/in/ian-du/" target="_blank">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </span>
                             <p>https://www.linkedin.com/in/ian-du/</p>
                         </li>
                         <li>
-                            <span class="icon"><i class="fa fa-phone"></i></span>
+                            <span class="icon">
+                                <a onclick="copyToClipboard('9494079075')">
+                                    <i class="fa fa-phone"></i>
+                                </a>
+                            </span>
                             <p>(949) 407-9075</p>
                         </li>
                     </ul>
                 </div>
-                <div class="form_container">
-                    <h1>Send Me a Message!</h1>
+                <div id="contactForm" class="form_container">
                     <div class="formBox">
                         <div class="inputBox w100">
                             <span>Full Name*</span>
@@ -225,11 +236,9 @@
                             <input type="text" name="phone_number" required>
                         </div>
                         <div class="inputBox w100">
-                            <textarea name="message" placeholder="Write a message here :)" rows="8"></textarea>
+                            <textarea name="message" placeholder="Write a message here :)" rows="7"></textarea>
                         </div>
-                        <div class="inputBox w100">
-                            <input type="submit" value="Send">
-                        </div>
+                        <button id="submitButton" type="button">Send</button>
                     </div>
                 </div>
             </div>
