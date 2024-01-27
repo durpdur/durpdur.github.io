@@ -10,9 +10,9 @@
         <header>
             <div class="social-menu">
                 <ul>
-                    <li><a href="https://www.linkedin.com/in/ian-du-172115245/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/ian-du/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                     <li><a href="https://github.com/durpdur" target="_blank"><i class="fa fa-github"></i></a></li>
-                    <li><a onclick="copyEmailToClipboard()"><i class="fa fa-envelope" id="copyEmailButton"></i></a></li>
+                    <li><a onclick="copyToClipboard('xingrandu@gmail.com')"><i class="fa fa-envelope" id="copyEmailButton"></i></a></li>
                 </ul>
             </div>
 
@@ -27,7 +27,7 @@
             </div>
         </header>
 
-        <div id="popup" class="popup">Email copied! [xingrandu@gmail.com]</div>
+        <div id="popup" class="popup">Copied to clipboard!</div>
 
         <button class="topbtn" onclick="scrollToTop()">
             <i class="fa-solid fa-arrow-up"></i>
@@ -166,8 +166,8 @@
 
                 <div class="card_img">
                     <div>
-                        <img src="https://source.unsplash.com/a-group-of-white-and-gold-tiles-on-a-white-surface-nPZ68nehUUo"
-                        alt="gold_tiles_img"/>
+                        <img src="images/projects/Porfolio Project.png"
+                        alt="portfolio_png"/>
                     </div>
                 </div>
             </div>
@@ -187,7 +187,58 @@
         </section>
 
         <section class="contact" id="contact">
-            <h1>Contact Me</h1>
+            <div class="contact_container">
+                <div class="info_container">
+                    <h1>Contact Me</h1>
+                    <ul class="info_list">
+                        <li>
+                            <span class="icon"><i class="fa fa-envelope"></i></span>
+                            <p>xingrandu@gmail.com</p>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-linkedin"></i></span>
+                            <p>https://www.linkedin.com/in/ian-du/</p>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-phone"></i></span>
+                            <p>(949) 407-9075</p>
+                        </li>
+                    </ul>
+                    <ul class="contact-buttons">
+                        <li><a href="https://www.linkedin.com/in/ian-du/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://github.com/durpdur" target="_blank"><i class="fa fa-github"></i></a></li>
+                        <li><a onclick="copyToClipboard('xingrandu@gmail.com')"><i class="fa fa-envelope" id="copyEmailButton"></i></a></li>
+                        <li><a onclick="copyToClipboard('9494079075')"><i class="fa fa-phone" id="copyPhoneButton"></i></a></li>
+                    </ul>
+                </div>
+                <div class="form_container">
+                    <h2>Send Me a Message!</h2>
+                    <div class="formBox">
+                        <div class="inputBox w100">
+                            <span>Full Name*</span>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="inputBox w33">
+                            <span>Company</span>
+                            <input type="text" name="company_name">
+                        </div>
+                        <div class="inputBox w33">
+                            <span>Email Address*</span>
+                            <input type="text" name="email_address" required>
+                        </div>
+                        <div class="inputBox w33">
+                            <span>Phone Number*</span>
+                            <input type="text" name="phone_number" required>
+                        </div>
+                        <div class="inputBox w100">
+                            <textarea name="message" placeholder="Write me a message here :)"></textarea>
+                        </div>
+                        <div class="inputBox w100">
+                            <input type="submit" value="Send">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <script src="script.js"></script>

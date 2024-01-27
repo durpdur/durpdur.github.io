@@ -34,8 +34,8 @@ window.addEventListener('scroll', function(){
     }
 })
 
-function copyEmailToClipboard() {
-    const email = "xingrandu@gmail.com";
+function copyToClipboard(text) {
+    const email = text;
     const tempInput = document.createElement("input");
     tempInput.value = email;
     document.body.appendChild(tempInput);
