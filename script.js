@@ -106,3 +106,29 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll('.hidden, .hiddenRight');
 hiddenElements.forEach((el) => observer.observe(el));
+
+function sendEmail() {
+    var fullName = document.getElementsByName("name")[0].value;
+    var company = document.getElementsByName("company_name")[0].value;
+    var emailAddress = document.getElementsByName("email_address")[0].value;
+    var phoneNumber = document.getElementsByName("phone_number")[0].value;
+    var message = document.getElementsByName("message")[0].value;
+
+    var subject = "Message from " + fullName + " @ " + company + "\n";
+    var body = "Name: " + fullName + "\n" +
+               "Company: " + company + "\n" +
+               "Email Address: " + emailAddress + "\n" +
+               "Phone Number: " + phoneNumber + "\n" +
+               "Message:\n" + message;
+
+    subject = encodeURIComponent(subject);
+    body = encodeURIComponent(body);
+
+    // Create the mailto: URL
+    var mailtoUrl = "mailto:xingrandu@gmail.com" + 
+                    "?subject=" + subject + 
+                    "&body=" + body;
+
+    // Open the user's default email client
+    window.location.href = mailtoUrl;
+}
