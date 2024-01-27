@@ -29,20 +29,6 @@
     z-index: 1000;
   }
   
-  .contact_container .info_container {
-    position: absolute;
-    top: 40px;
-    width: 350px;
-    height: calc(100% - 80px);
-    background: #0f3959;
-    z-index: 1;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
-  }
-  
   .contact_container .form_container {
     position: absolute;
     padding: 70px 50px;
@@ -54,9 +40,9 @@
     box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
   }
   
-  .form_container h2 {
+  .form_container h1 {
     color: black;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 2em;
   }
   
