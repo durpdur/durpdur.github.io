@@ -3,7 +3,7 @@
 @import 'Projects/projects.css';
 @import 'Work/timeline.css';
 @import 'ContactMe/contactInfo.css';
-@import 'ContactMe/messagebox.css';
+@import 'ContactMe/messageBox.css';
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100,200,300,400,500,600,700&display=swap");
 @keyframes slideIn {
   from {
