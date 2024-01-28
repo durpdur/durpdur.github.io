@@ -57,5 +57,9 @@ header {
     z-index: 10000;
 }
 
-
-
+@media (max-width: 767px) {
+    html {
+      width: 100%;
+      overflow-x: hidden;
+    }
+  }
