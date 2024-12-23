@@ -33,12 +33,12 @@
   margin-bottom: 0.5em;
 }
 
-.work_title {
+/* .work_title {
   text-align: left;
-}
+} */
 
 .work_title h1 {
-  font-size: 1.5em;
+  font-size: 5em;
 }
 
 .timeline {
