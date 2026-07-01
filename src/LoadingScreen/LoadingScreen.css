@@ -1,0 +1,52 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle {
+  background-color: purple;
+  margin: 5px;
+  border-radius: 50%;
+  animation: flux linear 1s;
+}
+
+#circle1 {
+  width: 30px;
+  height: 30px;
+}
+
+#circle2 {
+  width: 45px;
+  height: 45px;
+
+  animation-delay: 1s;
+}
+
+#circle3 {
+  width: 60px;
+  height: 60px;
+
+  animation-delay: 2s;
+}
+
+@keyframes flux {
+  0% {
+    display: none;
+  }
+  20% {
+    transform: scale(0.2);
+  }
+  40% {
+    transform: scale(0.4);
+  }
+  60% {
+    transform: scale(0.6);
+  }
+  80% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
