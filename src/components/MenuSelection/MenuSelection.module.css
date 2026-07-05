@@ -1,4 +1,4 @@
-#menuSelection_wrapper {
+.menuSelection_wrapper {
   background-color: #72a7ab;
   height: 100vh;
   display: flex;
@@ -6,6 +6,12 @@
   justify-content: center;
 }
 
-#menu_wrapper {
+.menu_wrapper {
   background-color: #d7f1f1;
+}
+
+.menu_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
