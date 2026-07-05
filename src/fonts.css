@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "Eurostile";
+  src: url("./assets/EurostileLT/EurostileLTProUnicode.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Eurostile";
+  src: url("./assets/EurostileLT/EurostileLTProUnicode-Oblique.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: oblique;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Eurostile";
+  src: url("./assets/EurostileLT/EurostileLTProUnicode-Demi.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Eurostile";
+  src: url("./assets/EurostileLT/EurostileLTProUnicode-DemiOblique.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: oblique;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Eurostile";
+  src: url("./assets/EurostileLT/EurostileLTProUnicode-Bold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Eurostile";
+  src: url("./assets/EurostileLT/EurostileLTProUnicode-BoldOblique.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: oblique;
+  font-display: swap;
+}
+
+/* Base family */
+.eurostile {
+  font-family: "Eurostile", sans-serif;
+}
+
+/* Regular */
+.eurostile-regular {
+  font-family: "Eurostile", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.eurostile-oblique {
+  font-family: "Eurostile", sans-serif;
+  font-weight: 400;
+  font-style: oblique;
+}
+
+/* Demi */
+.eurostile-demi {
+  font-family: "Eurostile", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.eurostile-demi-oblique {
+  font-family: "Eurostile", sans-serif;
+  font-weight: 600;
+  font-style: oblique;
+}
+
+/* Bold */
+.eurostile-bold {
+  font-family: "Eurostile", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.eurostile-bold-oblique {
+  font-family: "Eurostile", sans-serif;
+  font-weight: 700;
+  font-style: oblique;
+}

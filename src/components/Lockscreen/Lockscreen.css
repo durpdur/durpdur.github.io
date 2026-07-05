@@ -1,0 +1,52 @@
+#lockscreen_wrapper {
+  background-color: #72a7ab;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#text_wrapper {
+  background-color: #d7f1f1;
+  height: calc(3 * var(--lockscreen-font-size));
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#text_input {
+  all: unset;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: text;
+}
+
+#display_text {
+  letter-spacing: var(--lockscreen-font-size);
+  font-size: var(--lockscreen-font-size);
+  color: #000000;
+  pointer-events: none;
+}
+
+.cursor::after {
+  content: "_";
+  color: #333;
+  font-weight: bold;
+  transform: scaleX(1.5);
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: #000000;
+  }
+
+  50% {
+    color: #ffffff;
+  }
+}

@@ -1,8 +1,12 @@
-import { useEffect, useState } from 'react'
-import Lockscreen from './Lockscreen'
-import LoadingScreen from './LoadingScreen/LoadingScreen'
+import { useEffect, useState } from 'react';
+import Lockscreen from '../components/Lockscreen/Lockscreen';
+import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
+import MenuSelection from '../components/MenuSelection/MenuSelection';
+import "./App.css";
 
 function App() {
+    const MENU_ITEMS = ["Education", "Work Experience", "Projects", "Contact"];
+
     const [isLoading, setIsLoading] = useState(true)
     const [authenticated, setAuthenticated] = useState(false)
     const [text, setText] = useState("Locked")
@@ -34,13 +38,17 @@ function App() {
     return (
         <main className="app-page">
             {!authenticated ?
-                (<Lockscreen />) :
+                (<Lockscreen
+                    setAuthenticated={setAuthenticated}
+                />) :
                 (<div>
-                    <p>Blah blah blah rest of app</p>
+                    <MenuSelection
+                        MENU_ITEMS={MENU_ITEMS}
+                    />
                 </div>)
             }
             <button
-                style={{ background: "blue", width: "200px", height: "200px" }}
+                className="bypass_button"
                 onClick={() => setAuthenticated(prev => !prev)}
             >
                 {text}

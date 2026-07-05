@@ -1,0 +1,11 @@
+#menuSelection_wrapper {
+  background-color: #72a7ab;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#menu_wrapper {
+  background-color: #d7f1f1;
+}
