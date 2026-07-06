@@ -1,14 +1,14 @@
 import styles from "./MenuSelection.module.css";
 
 import type { MenuItem } from "../../types/menu";
-import { useState } from "react";
+// import { useState } from "react";
 
 type MenuSelectionProps = {
     MENU_ITEMS: Array<MenuItem>;
 }
 
 function MenuSelection({ MENU_ITEMS }: MenuSelectionProps) {
-    const [selected, setSelected] = useState(0);
+    // const [selected, setSelected] = useState(0);
 
     return (
         <div className={styles.menuSelection_wrapper}>
