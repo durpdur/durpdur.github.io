@@ -1,13 +1,16 @@
 import { useEffect, useState } from 'react';
+
 import Lockscreen from '../components/Lockscreen/Lockscreen';
 import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
 import MenuSelection from '../components/MenuSelection/MenuSelection';
+
 import "./App.css";
 
 import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 import CodeIcon from '@mui/icons-material/Code';
 import ContactsIcon from '@mui/icons-material/Contacts';
+
 import type { MenuItem } from '../types/menu';
 
 function App() {
