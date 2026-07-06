@@ -2,7 +2,6 @@ import styles from "./MenuSelection.module.css";
 
 import type { MenuItem } from "../../types/menu";
 import { useState } from "react";
-import { BrowserRouter } from 'react-router-dom';
 
 type MenuSelectionProps = {
     MENU_ITEMS: Array<MenuItem>;
