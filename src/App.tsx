@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import Lockscreen from './components/Lockscreen/Lockscreen';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen';
-import MenuSelection from './components/MenuSelection/MenuSelection';
+import AppRoutes from './AppRoutes';
 
 import "./App.css";
 
@@ -15,10 +15,10 @@ import type { MenuItem } from './types/menu';
 
 function App() {
     const MENU_ITEMS: MenuItem[] = [
-        { icon: SchoolIcon, label: "Education" },
-        { icon: WorkIcon, label: "Work Experience" },
-        { icon: CodeIcon, label: "Projects" },
-        { icon: ContactsIcon, label: "Contact" }
+        { icon: SchoolIcon, label: "Education", path: "/education" },
+        { icon: WorkIcon, label: "Work Experience", path: "/work" },
+        { icon: CodeIcon, label: "Projects", path: "/projects" },
+        { icon: ContactsIcon, label: "Contact", path: "/contact" }
     ];
 
     const [isLoading, setIsLoading] = useState(true)
@@ -52,14 +52,12 @@ function App() {
     return (
         <main className="app-page">
             {!authenticated ?
-                (<Lockscreen
-                    setAuthenticated={setAuthenticated}
-                />) :
-                (<div>
-                    <MenuSelection
-                        MENU_ITEMS={MENU_ITEMS}
-                    />
-                </div>)
+                (
+                    <Lockscreen setAuthenticated={setAuthenticated} />
+                ) :
+                (
+                    <AppRoutes menuItems={MENU_ITEMS} />
+                )
             }
             <button
                 className="bypass_button"

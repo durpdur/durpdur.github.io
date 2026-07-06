@@ -2,6 +2,7 @@ import styles from "./MenuSelection.module.css";
 
 import type { MenuItem } from "../../types/menu";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 type MenuSelectionProps = {
     MENU_ITEMS: Array<MenuItem>;
@@ -13,10 +14,10 @@ function MenuSelection({ MENU_ITEMS }: MenuSelectionProps) {
     return (
         <div className={styles.menuSelection_wrapper}>
             <div className={styles.menu_wrapper}>
-                {MENU_ITEMS.map(({ icon: Icon, label }, index) => (
-                    <div
-                        tabIndex={0}
-                        key={index}
+                {MENU_ITEMS.map(({ icon: Icon, label, path }, index) => (
+                    <Link
+                        to={path}
+                        key={path}
                         className={`${styles.menu_item} ${focusedIndex == index ? styles.focused : ""}`}
                         onFocus={() => setFocusedIndex(index)}
                     >
@@ -24,7 +25,7 @@ function MenuSelection({ MENU_ITEMS }: MenuSelectionProps) {
                             <Icon />
                         </div>
                         <div className={styles.menu_item_label}>{label.toUpperCase()}</div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div >
