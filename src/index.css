@@ -2,6 +2,9 @@
 
 :root {
   --lockscreen-font-size: 2rem;
+  --primary-color: #72a7ab;
+  --secondary-color: #d7f1f1;
+  --error-color: #e60004;
 }
 
 html,

@@ -1,0 +1,128 @@
+{
+  "personal": {
+    "name": "Xingran Du",
+    "phone": "949-332-9888",
+    "email": "xingrandu@gmail.com",
+    "linkedin": "https://linkedin.com/in/ian-du",
+    "website": "https://durpdur.github.io"
+  },
+  "education": [
+    {
+      "institution": "San Jose State University",
+      "location": "San Jose, CA",
+      "degree": "B.S. in Computer Science & Linguistics",
+      "startDate": "January 2024",
+      "endDate": "December 2027",
+      "coursework": [
+        "Computer Architecture",
+        "Natural Language Processing",
+        "Data Structures and Algorithms"
+      ],
+      "awards": [
+        "Berkeley AI Hacks 1st Place",
+        "UCLA Hacks 1st Place",
+        "LeetCode Knight -- Top 10%"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "title": "AI/ML Researcher",
+      "organization": "San Jose State University",
+      "location": "San Jose, CA",
+      "startDate": "October 2025",
+      "endDate": "Present",
+      "highlights": [
+        "Benchmarking quantized transformer performance on edge-device hardware, comparing token throughput, memory use, and power usage",
+        "Conducted research on LLM response quality using corpus linguistic benchmarks in Pandas",
+        "Built a React web app helping Dr. William Andreopoulos visualize his semantic-clustering algorithm"
+      ]
+    },
+    {
+      "title": "Software Developer Intern",
+      "organization": "Rybot",
+      "location": "Fairfield, CA",
+      "startDate": "February 2025",
+      "endDate": "May 2025",
+      "highlights": [
+        "Shipped internal messaging tool for cross-checking generated responses, increasing PR approval rates by 16%",
+        "Configured SEO data analysis pipeline impacting 240+ web pages, driving 28% increase in traffic with 19% increase on ROAS"
+      ]
+    },
+    {
+      "title": "Software Engineering Intern",
+      "organization": "San Jose State University",
+      "location": "San Jose, CA",
+      "startDate": "May 2025",
+      "endDate": "August 2025",
+      "highlights": [
+        "Integrated OAuth with Express.js API to verify new users via SMTP, enabling secure logins for 200+ students",
+        "Added support for Prometheus metrics and Federation, monitoring distributed sce.sjsu.edu deployments",
+        "Deployed email service with Docker and visualized server health in Grafana dashboards"
+      ],
+      "links": [
+        {
+          "label": "sce.sjsu.edu",
+          "url": "https://sce.sjsu.edu"
+        }
+      ]
+    },
+    {
+      "title": "Frontend Developer",
+      "organization": "Pvragon",
+      "location": "San Diego, CA",
+      "startDate": "March 2024",
+      "endDate": "December 2024",
+      "highlights": [
+        "Deployed OkRideShare, Pvragon's flagship website in three weeks per Albert B. Chandler Hospital's requirements",
+        "Delivered production features that supported two six-figure contract wins from the State of Kentucky and Michigan",
+        "Migrated database with 400+ daily entries from legacy Excel system to PostgreSQL database with Redis caching"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Narcore - Agent Swarm",
+      "subtitle": "Berkeley AI Hackathon Winner",
+      "date": "April 2026",
+      "technologies": ["Agent Swarm", "Redis"],
+      "highlights": [
+        "Deployed 20 parallel computer-vision agents to scrape and detect illegal vendor activity",
+        "Implemented a Redis-based LRU cache for vector embeddings, reducing repeated vectorization across agents"
+      ]
+    },
+    {
+      "name": "Obi - Local AI Search Engine",
+      "subtitle": "UCLA Hackathon Winner",
+      "date": "April 2026",
+      "technologies": ["llama.cpp", "Electron", "Node"],
+      "highlights": [
+        "Built a 100% local desktop AI search agent with file-system access using Electron, Node.js, and llama.cpp",
+        "Designed custom chunking and embedding strategies for 28 types of text and image formats",
+        "Optimized latency of search to 140ms, response to 1.2 seconds, and cold-start to 3.7 seconds"
+      ]
+    },
+    {
+      "name": "llama.cpp",
+      "subtitle": "Open Source Contributor",
+      "date": "May 2026",
+      "technologies": ["C++"],
+      "highlights": [
+        "Writing user-guide for llama.cpp HTTP server API",
+        "Debugging Qwen3-Omni quantization support"
+      ]
+    }
+  ],
+  "technicalSkills": {
+    "languages": ["Python", "Java", "C++", "TypeScript", "SQL", "HTML/CSS"],
+    "databasesAndStorage": ["PostgreSQL", "MySQL", "Redis", "Google Cloud"],
+    "frameworks": ["React", "Node.js", "Spring Boot", "Docker", "Pandas"],
+    "developerTools": ["Linux", "Git/GitHub", "CI/CD", "Grafana", "Prometheus"],
+    "llmInference": [
+      "llama.cpp",
+      "vLLM",
+      "GGUF",
+      "Apple Neural Engine & Core ML"
+    ]
+  }
+}

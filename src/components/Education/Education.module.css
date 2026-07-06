@@ -1,0 +1,63 @@
+.wrapper {
+  height: 100vh;
+  background-color: var(--primary-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: #fff;
+  margin: 0.5em;
+  font-family: "Eurostile";
+  font-weight: 600;
+  font-size: 3.5em;
+  letter-spacing: 0.1em;
+  transform: scaleX(1.1);
+  transform-origin: center center;
+}
+
+.countdown_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  background-color: var(--secondary-color);
+  padding: 2em 0;
+}
+
+.countdown_grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  column-gap: 4em;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown_number,
+.countdown_separator {
+  font-family: "Eurostile";
+  font-weight: 600;
+  font-size: 9em;
+  transform: scaleX(1.2);
+}
+
+.countdown_number {
+  text-align: center;
+}
+
+.countdown_separator {
+  text-align: center;
+}
+
+.countdown_legend {
+  color: var(--error-color);
+  font-family: "Eurostile";
+  font-weight: 600;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  transform: scaleX(1.1);
+  text-align: center;
+}

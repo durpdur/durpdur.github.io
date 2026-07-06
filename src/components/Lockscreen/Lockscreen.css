@@ -1,5 +1,5 @@
 #lockscreen_wrapper {
-  background-color: #72a7ab;
+  background-color: var(--primary-color);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -7,7 +7,7 @@
 }
 
 #text_wrapper {
-  background-color: #d7f1f1;
+  background-color: var(--secondary-color);
   height: calc(2.5 * var(--lockscreen-font-size));
   width: 100%;
   display: flex;
