@@ -11,7 +11,9 @@ import WorkIcon from '@mui/icons-material/Work';
 import CodeIcon from '@mui/icons-material/Code';
 import ContactsIcon from '@mui/icons-material/Contacts';
 
-import type { MenuItem } from './types/menu';
+import portfolioData from "./assets/portfolio_data.json";
+
+import type { MenuItem } from './types/menu_types';
 
 function App() {
     const MENU_ITEMS: MenuItem[] = [
@@ -28,7 +30,7 @@ function App() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoading(false)
-        }, 3000)
+        }, 50)
 
         return () => clearTimeout(timer)
     }, [])
@@ -56,7 +58,10 @@ function App() {
                     <Lockscreen setAuthenticated={setAuthenticated} />
                 ) :
                 (
-                    <AppRoutes menuItems={MENU_ITEMS} />
+                    <AppRoutes
+                        menuItems={MENU_ITEMS}
+                        portfolioData={portfolioData}
+                    />
                 )
             }
             <button

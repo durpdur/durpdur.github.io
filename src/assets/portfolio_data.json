@@ -6,26 +6,24 @@
     "linkedin": "https://linkedin.com/in/ian-du",
     "website": "https://durpdur.github.io"
   },
-  "education": [
-    {
-      "institution": "San Jose State University",
-      "location": "San Jose, CA",
-      "degree": "B.S. in Computer Science & Linguistics",
-      "startDate": "January 2024",
-      "endDate": "December 2027",
-      "coursework": [
-        "Computer Architecture",
-        "Natural Language Processing",
-        "Data Structures and Algorithms"
-      ],
-      "awards": [
-        "Berkeley AI Hacks 1st Place",
-        "UCLA Hacks 1st Place",
-        "LeetCode Knight -- Top 10%"
-      ]
-    }
-  ],
-  "experience": [
+  "education": {
+    "institution": "San Jose State University",
+    "location": "San Jose, CA",
+    "degree": "B.S. in Computer Science & Linguistics",
+    "startDate": "2024-01-15T00:00:00-08:00",
+    "endDate": "2027-12-15T00:00:00-08:00",
+    "coursework": [
+      "Computer Architecture",
+      "Natural Language Processing",
+      "Data Structures and Algorithms"
+    ],
+    "awards": [
+      "Berkeley AI Hacks 1st Place",
+      "UCLA Hacks 1st Place",
+      "LeetCode Knight -- Top 10%"
+    ]
+  },
+  "experiences": [
     {
       "title": "AI/ML Researcher",
       "organization": "San Jose State University",

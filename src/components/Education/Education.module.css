@@ -10,10 +10,21 @@
 
 .title {
   color: #fff;
-  margin: 0.5em;
+  margin-top: 0.5em;
   font-family: "Eurostile";
   font-weight: 600;
   font-size: 3.5em;
+  letter-spacing: 0.1em;
+  transform: scaleX(1.1);
+  transform-origin: center center;
+}
+
+.subtitle {
+  color: #fff;
+  margin-bottom: 0.5em;
+  font-family: "Eurostile";
+  font-weight: 600;
+  font-size: 2em;
   letter-spacing: 0.1em;
   transform: scaleX(1.1);
   transform-origin: center center;

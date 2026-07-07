@@ -1,6 +1,6 @@
 import styles from "./MenuSelection.module.css";
 
-import type { MenuItem } from "../../types/menu";
+import type { MenuItem } from "../../types/menu_types";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
