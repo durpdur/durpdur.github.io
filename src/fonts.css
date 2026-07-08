@@ -19,7 +19,7 @@
   font-family: "Eurostile";
   src: url("./assets/EurostileLT/EurostileLTProUnicode-Demi.otf")
     format("opentype");
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -28,7 +28,7 @@
   font-family: "Eurostile";
   src: url("./assets/EurostileLT/EurostileLTProUnicode-DemiOblique.otf")
     format("opentype");
-  font-weight: 600;
+  font-weight: 500;
   font-style: oblique;
   font-display: swap;
 }
@@ -37,7 +37,7 @@
   font-family: "Eurostile";
   src: url("./assets/EurostileLT/EurostileLTProUnicode-Bold.otf")
     format("opentype");
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -46,7 +46,7 @@
   font-family: "Eurostile";
   src: url("./assets/EurostileLT/EurostileLTProUnicode-BoldOblique.otf")
     format("opentype");
-  font-weight: 700;
+  font-weight: 600;
   font-style: oblique;
   font-display: swap;
 }

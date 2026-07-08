@@ -12,7 +12,7 @@
   color: #fff;
   margin-top: 0.5em;
   font-family: "Eurostile";
-  font-weight: 600;
+  font-weight: 500;
   font-size: 3.5em;
   letter-spacing: 0.1em;
   transform: scaleX(1.1);
@@ -23,7 +23,7 @@
   color: #fff;
   margin-bottom: 0.5em;
   font-family: "Eurostile";
-  font-weight: 600;
+  font-weight: 400;
   font-size: 2em;
   letter-spacing: 0.1em;
   transform: scaleX(1.1);
@@ -31,6 +31,7 @@
 }
 
 .countdown_wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,7 +51,7 @@
 .countdown_number,
 .countdown_separator {
   font-family: "Eurostile";
-  font-weight: 600;
+  font-weight: 500;
   font-size: 9em;
   transform: scaleX(1.2);
 }
@@ -66,9 +67,51 @@
 .countdown_legend {
   color: var(--error-color);
   font-family: "Eurostile";
-  font-weight: 600;
+  font-weight: 500;
   font-size: 2em;
   letter-spacing: 0.1em;
   transform: scaleX(1.1);
   text-align: center;
+}
+
+.graduated_banner {
+  position: absolute;
+  width: 100vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--error-color);
+  animation: graduated 75ms steps(1, end) forwards;
+}
+
+.graduated_text {
+  font-family: "Eurostile";
+  font-weight: 500;
+  font-size: 7em;
+  color: #fff;
+  transform: scaleX(1.2) translateY(0.1em);
+  transform-origin: center center;
+}
+
+@keyframes graduated {
+  0% {
+    opacity: 0;
+  }
+
+  33% {
+    opacity: 0.5;
+  }
+
+  66% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

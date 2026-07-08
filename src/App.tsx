@@ -25,7 +25,6 @@ function App() {
 
     const [isLoading, setIsLoading] = useState(true)
     const [authenticated, setAuthenticated] = useState(false)
-    const [text, setText] = useState("Locked")
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -34,14 +33,6 @@ function App() {
 
         return () => clearTimeout(timer)
     }, [])
-
-    useEffect(() => {
-        if (authenticated) {
-            setText("Unlocked!")
-        } else {
-            setText("Locked")
-        }
-    }, [authenticated])
 
     if (isLoading) {
         return (
@@ -64,12 +55,6 @@ function App() {
                     />
                 )
             }
-            <button
-                className="bypass_button"
-                onClick={() => setAuthenticated(prev => !prev)}
-            >
-                {text}
-            </button>
         </main>
 
     )

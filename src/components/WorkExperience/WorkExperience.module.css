@@ -1,0 +1,115 @@
+.wrapper {
+  height: 100vh;
+}
+
+.card {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 3fr 1fr;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color: #fff;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+/* Title */
+.left_title,
+.right_title {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1em;
+}
+
+.main_title {
+  font-family: "Eurostile";
+  font-weight: 500;
+  font-size: xx-large;
+  letter-spacing: 0.1em;
+  transform: scaleX(1.2);
+  transform-origin: left center;
+  margin: 0.7em 0 0.5em 0;
+}
+
+.subtitle {
+  font-family: "Eurostile";
+  letter-spacing: 0.1em;
+  transform: scaleX(1.1);
+  transform-origin: right center;
+  color: #fff;
+
+  margin-right: 1em;
+  display: flex;
+  align-items: baseline;
+}
+
+.subtitle_label {
+  font-weight: 500;
+  font-size: medium;
+}
+
+.subtitle_score {
+  font-weight: 500;
+  font-size: xx-large;
+
+  margin-left: 0.25em;
+}
+
+/* Main */
+.left_main {
+  background-color: var(--secondary-color);
+}
+
+.right_main {
+  background-color: var(--secondary-color);
+  padding-left: 1em;
+}
+
+.bulletpoints {
+  font-family: "Eurostile";
+  font-weight: 400;
+  font-size: 2em;
+
+  margin: 0.5em 0;
+}
+
+/* Legend */
+.left_legend,
+.right_legend {
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.legend_main,
+.legend_sub {
+  font-family: "Eurostile";
+
+  transform-origin: center center;
+  color: #fff;
+}
+
+.legend_main {
+  transform: scaleX(1.2);
+  font-size: xx-large;
+  font-weight: 500;
+
+  margin-top: 0.7em;
+}
+
+.legend_sub {
+  transform: scaleX(1.1);
+  font-size: large;
+  font-weight: 400;
+}

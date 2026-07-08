@@ -32,7 +32,7 @@ function Lockscreen({ setAuthenticated }: LockscreenProps) {
                     autoComplete="off"
                 />
 
-                <div id="display_text" className="eurostile-bold" aria-hidden="true">
+                <div id="display_text" className="eurostile-demi" aria-hidden="true">
                     {password || "PASSWORD"}
                     <span className="cursor"></span>
                 </div>

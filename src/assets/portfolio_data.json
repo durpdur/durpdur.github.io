@@ -11,7 +11,7 @@
     "location": "San Jose, CA",
     "degree": "B.S. in Computer Science & Linguistics",
     "startDate": "2024-01-15T00:00:00-08:00",
-    "endDate": "2027-12-15T00:00:00-08:00",
+    "endDate": "2025-12-15T00:00:00-08:00",
     "coursework": [
       "Computer Architecture",
       "Natural Language Processing",
@@ -40,8 +40,8 @@
       "title": "Software Developer Intern",
       "organization": "Rybot",
       "location": "Fairfield, CA",
-      "startDate": "February 2025",
-      "endDate": "May 2025",
+      "startDate": "February 2026",
+      "endDate": "May 2026",
       "highlights": [
         "Shipped internal messaging tool for cross-checking generated responses, increasing PR approval rates by 16%",
         "Configured SEO data analysis pipeline impacting 240+ web pages, driving 28% increase in traffic with 19% increase on ROAS"
