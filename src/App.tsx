@@ -6,6 +6,7 @@ import AppRoutes from './AppRoutes';
 
 import "./App.css";
 
+import InfoIcon from '@mui/icons-material/Info';
 import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 import CodeIcon from '@mui/icons-material/Code';
@@ -17,6 +18,7 @@ import type { MenuItem } from './types/menu_types';
 
 function App() {
     const MENU_ITEMS: MenuItem[] = [
+        { icon: InfoIcon, label: "About Xingran", path: "/info" },
         { icon: SchoolIcon, label: "Education", path: "/education" },
         { icon: WorkIcon, label: "Work Experience", path: "/work" },
         { icon: CodeIcon, label: "Projects", path: "/projects" },

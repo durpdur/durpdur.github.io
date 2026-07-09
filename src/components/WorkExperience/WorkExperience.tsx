@@ -1,5 +1,6 @@
 import styles from "./WorkExperience.module.css";
 import type { ExperienceData } from "../../types/portfolio_data_types";
+import SkillCard from "../SkillCards/SkillCard";
 
 type WorkExperienceProps = {
     experiences: ExperienceData[];
@@ -29,6 +30,8 @@ function WorkExperience({ experiences }: WorkExperienceProps) {
                         {experience.highlights.map((highlight) => (
                             <div className={styles.bulletpoints}>- {highlight}</div>
                         ))}
+
+                        <SkillCard skill={"react"} />
                     </div>
 
 
