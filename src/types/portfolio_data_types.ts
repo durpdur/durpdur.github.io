@@ -33,10 +33,6 @@ export type ExperienceData = {
     startDate: string;
     endDate: string;
     highlights: string[];
-    links?: {
-        label: string;
-        url: string;
-    }[];
 };
 
 export type ProjectData = {

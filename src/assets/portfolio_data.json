@@ -57,12 +57,6 @@
         "Integrated OAuth with Express.js API to verify new users via SMTP, enabling secure logins for 200+ students",
         "Added support for Prometheus metrics and Federation, monitoring distributed sce.sjsu.edu deployments",
         "Deployed email service with Docker and visualized server health in Grafana dashboards"
-      ],
-      "links": [
-        {
-          "label": "sce.sjsu.edu",
-          "url": "https://sce.sjsu.edu"
-        }
       ]
     },
     {

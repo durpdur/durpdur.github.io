@@ -1,6 +1,6 @@
 import styles from "./WorkExperience.module.css";
 import type { ExperienceData } from "../../types/portfolio_data_types";
-import SkillCard from "../SkillCards/SkillCard";
+import SkillCardCarousel from "../SkillCards/SkillCard";
 
 type WorkExperienceProps = {
     experiences: ExperienceData[];
@@ -24,14 +24,24 @@ function WorkExperience({ experiences }: WorkExperienceProps) {
                     </div>
 
                     {/* Main */}
-                    <div className={styles.left_main}></div>
+                    <div className={styles.left_main}>
+                        <SkillCardCarousel
+                            skills={[
+                                { name: "Python", masteryScore: 1 },
+                                { name: "Java", masteryScore: 4 },
+                                { name: "C++", masteryScore: 3 },
+                                { name: "TypeScript", masteryScore: 5 },
+                                { name: "SQL", masteryScore: 2 },
+                                { name: "HTML", masteryScore: 4 },
+                                { name: "CSS", masteryScore: 3 },
+                            ]}
+                        />
+                    </div>
                     <div className={styles.right_main}>
                         <div className={styles.bulletpoints}>Highlights</div>
                         {experience.highlights.map((highlight) => (
                             <div className={styles.bulletpoints}>- {highlight}</div>
                         ))}
-
-                        <SkillCard skill={"react"} />
                     </div>
 
 
