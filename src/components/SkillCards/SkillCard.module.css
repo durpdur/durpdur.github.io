@@ -9,6 +9,10 @@
   flex-direction: row;
   justify-content: center;
   margin: 0.5em 1em;
+
+  animation: fadeInLeft 400ms ease forwards;
+  animation-delay: var(--delay);
+  opacity: 0;
 }
 
 .svg_wrapper {
@@ -26,6 +30,7 @@
   background-color: var(--primary-color);
   margin-left: 0.5em;
 }
+
 .legend {
   font-family: "Eurostile";
   font-weight: 500;
@@ -43,7 +48,7 @@
 }
 
 .masterySegment {
-  width: 1.25em;
+  width: 2em;
   height: 0.35em;
   border: 1px solid #fff;
   opacity: 0.6;
@@ -52,4 +57,16 @@
 .filled {
   background-color: #fff;
   opacity: 1;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-0.75em);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

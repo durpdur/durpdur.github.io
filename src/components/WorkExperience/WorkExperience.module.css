@@ -68,6 +68,13 @@
 /* Main */
 .left_main {
   background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.company_logo {
+  width: 100%;
 }
 
 .right_main {

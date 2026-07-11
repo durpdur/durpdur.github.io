@@ -25,6 +25,12 @@ function WorkExperience({ experiences }: WorkExperienceProps) {
 
                     {/* Main */}
                     <div className={styles.left_main}>
+                        <img
+                            className={styles.company_logo}
+                            src={`/CompanyIcons/${experience.organization.trim().toLowerCase()}.jpg`}
+                            alt={`${experience.organization} logo`}
+                        />
+
                         <SkillCardCarousel
                             skills={[
                                 { name: "Python", masteryScore: 1 },
