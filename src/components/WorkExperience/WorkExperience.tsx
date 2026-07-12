@@ -25,11 +25,15 @@ function WorkExperience({ experiences }: WorkExperienceProps) {
 
                     {/* Main */}
                     <div className={styles.left_main}>
-                        <img
-                            className={styles.company_logo}
-                            src={`/CompanyIcons/${experience.organization.trim().toLowerCase()}.jpg`}
-                            alt={`${experience.organization} logo`}
-                        />
+                        <div className={styles.company_logo_wrapper}>
+                            <div className={styles.company_logo_border}>
+                                <img
+                                    className={styles.company_logo}
+                                    src={`/CompanyIcons/${experience.organization.replace(/\s/g, '').toLowerCase()}.jpg`}
+                                    alt={`${experience.organization} logo`}
+                                />
+                            </div>
+                        </div>
 
                         <SkillCardCarousel
                             skills={[
