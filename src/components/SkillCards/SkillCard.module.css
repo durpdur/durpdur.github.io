@@ -52,11 +52,12 @@
   height: 0.35em;
   border: 1px solid #fff;
   opacity: 0.6;
+  background-color: transparent;
 }
 
 .filled {
-  background-color: #fff;
-  opacity: 1;
+  animation: fillSegment 100ms steps(1, end) forwards;
+  animation-delay: var(--masteryBar-delay);
 }
 
 @keyframes fadeInLeft {
@@ -68,5 +69,17 @@
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes fillSegment {
+  from {
+    background-color: transparent;
+    opacity: 0.6;
+  }
+
+  to {
+    background-color: #fff;
+    opacity: 1;
   }
 }

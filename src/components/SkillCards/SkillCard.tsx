@@ -7,18 +7,18 @@ type Skill = {
 
 type SkillCardProps = {
     skill: Skill;
-    index: number;
+    cardIndex: number;
 }
 
 type SkillCardCarouselProps = {
     skills: Skill[];
 }
 
-function SkillCard({ skill, index }: SkillCardProps) {
+function SkillCard({ skill, cardIndex }: SkillCardProps) {
 
     return (
         <div className={styles.card_wrapper}
-            style={{ "--delay": `${index * 100}ms` } as React.CSSProperties}
+            style={{ "--delay": `${cardIndex * 100}ms` } as React.CSSProperties}
         >
             <div className={styles.svg_wrapper}>
                 <img className={styles.svg_icon}
@@ -33,6 +33,7 @@ function SkillCard({ skill, index }: SkillCardProps) {
                     {Array.from({ length: 5 }).map((_, index) => (
                         <div
                             key={index}
+                            style={{ "--masteryBar-delay": `${cardIndex * 100 + index * 100 + 400}ms`, } as React.CSSProperties}
                             className={`${styles.masterySegment} 
                                 ${index < skill.masteryScore ? styles.filled : ""}`}
                         />
@@ -50,7 +51,7 @@ function SkillCardCarousel({ skills }: SkillCardCarouselProps) {
                 <SkillCard
                     key={skill.name}
                     skill={skill}
-                    index={index}
+                    cardIndex={index}
                 />
             ))}
         </div>
