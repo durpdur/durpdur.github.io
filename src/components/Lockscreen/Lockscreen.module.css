@@ -1,4 +1,4 @@
-#lockscreen_wrapper {
+.lockscreen_wrapper {
   background-color: var(--primary-color);
   height: 100vh;
   display: flex;
@@ -6,7 +6,7 @@
   justify-content: center;
 }
 
-#text_wrapper {
+.text_wrapper {
   background-color: var(--secondary-color);
   height: calc(2.5 * var(--lockscreen-font-size));
   width: 100%;
@@ -16,7 +16,7 @@
   position: relative;
 }
 
-#text_input {
+.text_input {
   all: unset;
   position: absolute;
   inset: 0;
@@ -24,8 +24,10 @@
   cursor: text;
 }
 
-#display_text {
+.display_text {
   letter-spacing: var(--lockscreen-font-size);
+  font-family: "Eurostile";
+  font-weight: 500;
   font-size: var(--lockscreen-font-size);
   color: #333;
   pointer-events: none;

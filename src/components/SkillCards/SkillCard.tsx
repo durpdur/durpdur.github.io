@@ -2,7 +2,7 @@ import styles from "./SkillCard.module.css";
 
 type Skill = {
     name: string;
-    masteryScore: number;
+    confidence: number;
 }
 
 type SkillCardProps = {
@@ -22,7 +22,7 @@ function SkillCard({ skill, cardIndex }: SkillCardProps) {
         >
             <div className={styles.svg_wrapper}>
                 <img className={styles.svg_icon}
-                    src={`/SkillsIcons/${skill.name.trim().toLowerCase()}.svg`}
+                    src={`/SkillsIcons/${skill.name.replace(/\s/g, '').toLowerCase()}.svg`}
                     alt={skill.name}
                 />
             </div>
@@ -35,7 +35,7 @@ function SkillCard({ skill, cardIndex }: SkillCardProps) {
                             key={index}
                             style={{ "--masteryBar-delay": `${cardIndex * 100 + index * 100 + 400}ms`, } as React.CSSProperties}
                             className={`${styles.masterySegment} 
-                                ${index < skill.masteryScore ? styles.filled : ""}`}
+                                ${index < skill.confidence ? styles.filled : ""}`}
                         />
                     ))}
                 </div>

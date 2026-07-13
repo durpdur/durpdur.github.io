@@ -4,9 +4,12 @@ import SkillCardCarousel from "../SkillCards/SkillCard";
 
 type WorkExperienceProps = {
     experiences: ExperienceData[];
+    technicalSkills: Record<string, number>;
 }
 
-function WorkExperience({ experiences }: WorkExperienceProps) {
+function WorkExperience({ experiences, technicalSkills }: WorkExperienceProps) {
+
+
     return (
         <div className={styles.wrapper}>
             {experiences.map((experience) => (
@@ -36,19 +39,13 @@ function WorkExperience({ experiences }: WorkExperienceProps) {
                         </div>
 
                         <SkillCardCarousel
-                            skills={[
-                                { name: "Python", masteryScore: 1 },
-                                { name: "Java", masteryScore: 4 },
-                                { name: "C++", masteryScore: 3 },
-                                { name: "TypeScript", masteryScore: 5 },
-                                { name: "SQL", masteryScore: 2 },
-                                { name: "HTML", masteryScore: 4 },
-                                { name: "CSS", masteryScore: 3 },
-                            ]}
+                            skills={experience.skills.map((skill) => ({
+                                name: skill,
+                                confidence: technicalSkills[skill] ?? 5
+                            }))}
                         />
                     </div>
                     <div className={styles.right_main}>
-                        <div className={styles.bulletpoints}>Highlights</div>
                         {experience.highlights.map((highlight) => (
                             <div className={styles.bulletpoints}>- {highlight}</div>
                         ))}

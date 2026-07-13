@@ -33,6 +33,7 @@ export type ExperienceData = {
     startDate: string;
     endDate: string;
     highlights: string[];
+    skills: string[];
 };
 
 export type ProjectData = {
@@ -43,10 +44,4 @@ export type ProjectData = {
     highlights: string[];
 };
 
-export type TechnicalSkillsData = {
-    languages: string[];
-    databasesAndStorage: string[];
-    frameworks: string[];
-    developerTools: string[];
-    llmInference: string[];
-};
+export type TechnicalSkillsData = Record<string, number>;

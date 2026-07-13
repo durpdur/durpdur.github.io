@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Lockscreen.css";
+import styles from "./Lockscreen.module.css"
 
 type LockscreenProps = {
     setAuthenticated: React.Dispatch<React.SetStateAction<boolean>>
@@ -21,10 +21,10 @@ function Lockscreen({ setAuthenticated }: LockscreenProps) {
     }
 
     return (
-        <div id="lockscreen_wrapper">
-            <form id="text_wrapper" onSubmit={handleSubmit}>
+        <div className={styles.lockscreen_wrapper}>
+            <form className={styles.text_wrapper} onSubmit={handleSubmit}>
                 <input
-                    id="text_input"
+                    className={styles.text_input}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     autoFocus
@@ -32,7 +32,7 @@ function Lockscreen({ setAuthenticated }: LockscreenProps) {
                     autoComplete="off"
                 />
 
-                <div id="display_text" className="eurostile-demi" aria-hidden="true">
+                <div className={styles.display_text} aria-hidden="true">
                     {password || "PASSWORD"}
                     <span className="cursor"></span>
                 </div>
