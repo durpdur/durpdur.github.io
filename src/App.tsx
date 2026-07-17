@@ -26,7 +26,7 @@ function App() {
     ];
 
     const [isLoading, setIsLoading] = useState(true)
-    const [authenticated, setAuthenticated] = useState(false)
+    const [authenticated, setAuthenticated] = useState(true)
 
     useEffect(() => {
         const timer = setTimeout(() => {

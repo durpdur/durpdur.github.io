@@ -23,7 +23,7 @@ function AppRoutes({ menuItems, portfolioData }: AppRoutesProps) {
             <Route path="/info" element={<Education education={portfolioData.education} />} />
             <Route path="/education" element={<Education education={portfolioData.education} />} />
             <Route path="/work" element={<WorkExperience experiences={portfolioData.experiences} technicalSkills={portfolioData.technicalSkills} />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/projects" element={<Projects projects={portfolioData.projects} technicalSkills={portfolioData.technicalSkills} />} />
             <Route path="/contact" element={<Contact />} />
         </Routes>
     );

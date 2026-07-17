@@ -1,0 +1,74 @@
+.wrapper {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 100;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: rgba(96, 96, 98, 0.7);
+}
+
+.key_wrapper {
+  --key-size: 5em;
+  --key-animation-delay: 0.25s;
+  height: calc(2 * var(--key-size));
+  width: calc(3 * var(--key-size));
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5em;
+  padding-bottom: 1em;
+}
+
+.arrow_key {
+  border: 1.5px solid #fff;
+  border-radius: 0.25em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+
+  background: rgba(255, 255, 255, 0.01);
+  box-shadow:
+    0 0.15em 0 rgba(255, 255, 255, 0.25),
+    0 0.3em 0.8em rgba(0, 0, 0, 0.25);
+
+  animation: keyDown 2s cubic-bezier(0.2, 1.25, 0.4, 1) infinite;
+}
+
+.legend {
+  color: #fff;
+  font-family: "Eurostile";
+  text-align: center;
+}
+
+.up {
+  animation-delay: calc(0 * var(--key-animation-delay));
+}
+.left {
+  animation-delay: calc(1 * var(--key-animation-delay));
+}
+.down {
+  animation-delay: calc(2 * var(--key-animation-delay));
+}
+.right {
+  animation-delay: calc(3 * var(--key-animation-delay));
+}
+
+@keyframes keyDown {
+  0% {
+    transform: translateY(0) scale(1);
+    background: rgba(255, 255, 255, 0.01);
+  }
+  50% {
+    transform: translateY(5%) scale(0.98);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    background: rgba(255, 255, 255, 0.01);
+  }
+}

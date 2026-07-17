@@ -95,8 +95,9 @@
     {
       "name": "Narcore - Agent Swarm",
       "subtitle": "Berkeley AI Hackathon Winner",
+      "link": "https://github.com/cibarbia05/narcore",
       "date": "April 2026",
-      "technologies": ["ComputerVision", "Redis", "Agent Swarm"],
+      "technologies": ["Redis", "NextJs"],
       "highlights": [
         "Deployed 20 parallel computer-vision agents to scrape and detect illegal vendor activity",
         "Implemented a Redis-based LRU cache for vector embeddings, reducing repeated vectorization across agents"
@@ -106,7 +107,8 @@
       "name": "Obi - Local AI Search Engine",
       "subtitle": "UCLA Hackathon Winner",
       "date": "April 2026",
-      "technologies": ["llama.cpp", "Electron", "Nodejs"],
+      "link": "https://github.com/LAHacks2026/Obi_Laptop",
+      "technologies": ["llamacpp", "Electron", "Nodejs"],
       "highlights": [
         "Built a 100% local desktop AI search agent with file-system access using Electron, Node.js, and llama.cpp",
         "Designed custom chunking and embedding strategies for 28 types of text and image formats",
@@ -117,6 +119,7 @@
       "name": "llama.cpp",
       "subtitle": "Open Source Contributor",
       "date": "May 2026",
+      "link": "https://github.com/ggml-org/llama.cpp",
       "technologies": ["C++", "llamacpp", "Qwen3"],
       "highlights": [
         "Writing user-guide for llama.cpp HTTP server API",

@@ -15,6 +15,7 @@
 }
 
 .menu_item {
+  all: unset;
   display: grid;
   z-index: 1;
   grid-template-columns: 96px 1fr;

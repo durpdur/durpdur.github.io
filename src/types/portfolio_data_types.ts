@@ -39,6 +39,7 @@ export type ExperienceData = {
 export type ProjectData = {
     name: string;
     subtitle: string;
+    link: string;
     date: string;
     technologies: string[];
     highlights: string[];
