@@ -1,0 +1,115 @@
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 5fr 1fr;
+}
+
+.wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color: #fff;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+/* Header */
+.header_left,
+.header_right {
+  background-color: var(--primary-color);
+}
+
+/* Main */
+.main_left {
+  position: relative;
+  overflow: hidden;
+
+  background-color: var(--secondary-color);
+}
+
+.main_left img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -25%);
+  filter: grayscale(100%) sepia(20%);
+}
+
+.main_right {
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em;
+}
+
+.title,
+.subtitle {
+  font-family: "Eurostile";
+  font-weight: 500;
+  transform: scaleX(1.2);
+  transform-origin: center left;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.subtitle {
+  font-size: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+.location_chip {
+  color: var(--error-color);
+}
+
+.body {
+  font-family: "Eurostile";
+  font-weight: 400;
+}
+
+.contact_buttons_wrapper {
+  display: flex;
+  gap: 6rem;
+  margin-top: 1em;
+}
+
+.contact_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+
+  cursor: pointer;
+}
+
+.contact_button svg {
+  height: 2rem;
+  width: 2rem;
+}
+
+.contact_button:hover {
+  outline: 1px solid #000;
+}
+
+.contact_button:active {
+  animation: buttonClick 200ms ease;
+}
+
+/* Footer */
+.footer_left,
+.footer_right {
+  background-color: var(--primary-color);
+}
+
+@keyframes buttonClick {
+  50% {
+    transform: scale(0.95) translateY(0.3rem);
+  }
+}

@@ -5,7 +5,7 @@
   height: 100vh;
   background-color: var(--primary-color);
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 1fr 10fr 1fr;
 
   animation: mount 0.5s linear;
@@ -27,22 +27,59 @@
 
 .title_wrapper {
   display: flex;
+  gap: 7%;
+
+  margin: 1em 0;
 }
 
 .title {
   background-color: var(--primary-color);
-
   font-family: "Eurostile";
   font-weight: 500;
   color: #fff;
-  font-size: 2em;
+  font-size: 4em;
+  transform: scaleX(1.1);
+  transform-origin: center left;
+  padding: 0.2em 0.2em 0 0.2em;
+
+  display: flex;
+  align-items: center;
 }
 
 .legend {
+  border: 1px solid var(--primary-color);
+  padding: 0.5em;
+}
+
+.legend_title {
+  font-family: "Eurostile";
+  font-weight: 500;
+  color: var(--primary-color);
+  font-size: 1.3em;
+}
+
+.legend_content {
   font-family: "Eurostile";
   font-weight: 400;
   color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+}
+
+.awards {
+  display: inline-flex;
+  font-family: "Eurostile";
+  font-weight: 500;
+  background-color: var(--awards-color);
+  color: #fff;
+  padding: 0.1em 0.5em 0 0.5em;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.highlight_text {
+  font-family: "Eurostile";
+  font-weight: 400;
 }
 
 /* Project Footer */

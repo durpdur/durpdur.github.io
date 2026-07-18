@@ -13,7 +13,10 @@ export type PersonalData = {
     phone: string;
     email: string;
     linkedin: string;
+    repo: string;
     website: string;
+    location: string;
+    fun_facts: string[];
 };
 
 export type EducationData = {
@@ -39,6 +42,7 @@ export type ExperienceData = {
 export type ProjectData = {
     name: string;
     subtitle: string;
+    awards?: string;
     link: string;
     date: string;
     technologies: string[];

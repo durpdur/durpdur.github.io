@@ -4,7 +4,14 @@
     "phone": "949-332-9888",
     "email": "xingrandu@gmail.com",
     "linkedin": "https://linkedin.com/in/ian-du",
-    "website": "https://durpdur.github.io"
+    "repo": "https://github.com/durpdur",
+    "website": "https://durpdur.github.io",
+    "location": "San Jose, CA",
+    "fun_facts": [
+      "I used to be a 1 michelin-star sous-chef",
+      "Homemade stocks and sauces are so good I still make my own",
+      "Poker is my favorite party game"
+    ]
   },
   "education": {
     "institution": "San Jose State University",
@@ -93,8 +100,9 @@
   ],
   "projects": [
     {
-      "name": "Narcore - Agent Swarm",
-      "subtitle": "Berkeley AI Hackathon Winner",
+      "name": "Narcore",
+      "subtitle": "Agent Swarm Harness",
+      "awards": "Berkeley AI Hackathon Winner",
       "link": "https://github.com/cibarbia05/narcore",
       "date": "April 2026",
       "technologies": ["Redis", "NextJs"],
@@ -104,8 +112,9 @@
       ]
     },
     {
-      "name": "Obi - Local AI Search Engine",
-      "subtitle": "UCLA Hackathon Winner",
+      "name": "Obi",
+      "subtitle": "Local AI Search Engine",
+      "awards": "UCLA Hackathon Winner",
       "date": "April 2026",
       "link": "https://github.com/LAHacks2026/Obi_Laptop",
       "technologies": ["llamacpp", "Electron", "Nodejs"],

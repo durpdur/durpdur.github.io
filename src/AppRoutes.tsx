@@ -7,6 +7,7 @@ import Contact from "./components/Contact/Contact";
 
 import type { MenuItem } from "./types/menu_types";
 import type { PortfolioData } from "./types/portfolio_data_types";
+import About from "./components/About/About";
 
 type AppRoutesProps = {
     menuItems: MenuItem[];
@@ -20,7 +21,7 @@ function AppRoutes({ menuItems, portfolioData }: AppRoutesProps) {
                 path="/"
                 element={<MenuSelection MENU_ITEMS={menuItems} />}
             />
-            <Route path="/info" element={<Education education={portfolioData.education} />} />
+            <Route path="/info" element={<About personal={portfolioData.personal} education={portfolioData.education} />} />
             <Route path="/education" element={<Education education={portfolioData.education} />} />
             <Route path="/work" element={<WorkExperience experiences={portfolioData.experiences} technicalSkills={portfolioData.technicalSkills} />} />
             <Route path="/projects" element={<Projects projects={portfolioData.projects} technicalSkills={portfolioData.technicalSkills} />} />

@@ -50,8 +50,6 @@ function WorkExperience({ experiences, technicalSkills }: WorkExperienceProps) {
 
     const experience = experiences[activeIndex];
 
-    if (!experience) return null;
-
     return (
         <div ref={wrapperRef} className={styles.wrapper} onKeyDown={handleKeyPress} tabIndex={0}>
             {showKeyHint && <KeyHint />}
