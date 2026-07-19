@@ -11,7 +11,7 @@ type AboutProps = {
     education: EducationData;
 }
 
-function About({ personal, education }: AboutProps) {
+function About({ personal }: AboutProps) {
     return (
         <div className={styles.wrapper}>
 
