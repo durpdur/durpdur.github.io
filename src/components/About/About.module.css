@@ -33,11 +33,11 @@
 }
 
 .main_left img {
-  width: 100%;
+  min-width: 100%;
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -30%);
+  transform: translate(-50%, -35%);
   filter: grayscale(100%) sepia(20%);
 }
 
