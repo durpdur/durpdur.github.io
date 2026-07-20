@@ -55,6 +55,9 @@
   font-weight: 500;
   transform: scaleX(1.2);
   transform-origin: center left;
+
+  display: inline-block;
+  width: fit-content;
 }
 
 .title {
