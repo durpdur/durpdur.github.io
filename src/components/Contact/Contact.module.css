@@ -1,0 +1,113 @@
+.wrapper {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 1fr 8fr 1fr;
+  grid-template-columns: 3fr 2fr;
+}
+
+/* HEADER */
+.header {
+  background-color: var(--primary-color);
+}
+
+/* MAIN LEFT */
+.main_left {
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_text_wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 30em;
+}
+
+.main_text_left,
+.main_text_right {
+  font-family: "Eurostile";
+  font-weight: 500;
+  font-size: 5em;
+  transform: scaleX(1.2);
+
+  display: inline-block;
+  width: fit-content;
+}
+
+.main_text_left {
+  transform-origin: center left;
+  align-self: flex-start;
+}
+
+.main_text_right {
+  transform-origin: center right;
+  align-self: flex-end;
+}
+
+.sub_text {
+  font-family: "Eurostile";
+  font-weight: 400;
+  font-size: 2em;
+
+  opacity: 0.7;
+}
+
+.sub_text a {
+  color: inherit;
+}
+
+/* MAIN RIGHT */
+.main_right {
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3em;
+}
+
+.text_body {
+  font-family: "Eurostile";
+  font-weight: 400;
+  font-size: 2em;
+}
+
+.contact_buttons_wrapper {
+  display: flex;
+  gap: 6rem;
+  margin-top: 1em;
+}
+
+.contact_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+
+  cursor: pointer;
+}
+
+.contact_button svg {
+  height: 2rem;
+  width: 2rem;
+}
+
+.contact_button:hover {
+  outline: 1px solid #000;
+}
+
+.contact_button:active {
+  animation: buttonClick 200ms ease;
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--primary-color);
+}
+
+@keyframes buttonClick {
+  50% {
+    transform: scale(0.95) translateY(0.3rem);
+  }
+}

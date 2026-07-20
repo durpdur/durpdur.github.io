@@ -18,7 +18,7 @@ import type { MenuItem } from './types/menu_types';
 
 function App() {
     const MENU_ITEMS: MenuItem[] = [
-        { icon: InfoIcon, label: "About Xingran", path: "/info" },
+        { icon: InfoIcon, label: "About Ian", path: "/info" },
         { icon: SchoolIcon, label: "Education", path: "/education" },
         { icon: WorkIcon, label: "Work Experience", path: "/work" },
         { icon: CodeIcon, label: "Projects", path: "/projects" },

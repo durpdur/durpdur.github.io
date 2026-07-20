@@ -73,7 +73,7 @@
   color: var(--error-color);
 }
 
-.body {
+.text_body {
   font-family: "Eurostile";
   font-weight: 400;
 }

@@ -28,7 +28,7 @@ function About({ personal }: AboutProps) {
                     <div className={styles.location_chip}>{personal.location}</div>
                 </div>
 
-                <div className={styles.body}>
+                <div className={styles.text_body}>
                     {personal.fun_facts.map((fact) => (
                         <div>{fact}</div>
                     ))}
