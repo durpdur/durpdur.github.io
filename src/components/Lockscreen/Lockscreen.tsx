@@ -34,7 +34,7 @@ function Lockscreen({ setAuthenticated }: LockscreenProps) {
 
                 <div className={styles.display_text} aria-hidden="true">
                     {password || "PASSWORD"}
-                    <span className="cursor"></span>
+                    <span className={styles.cursor}></span>
                 </div>
             </form>
         </div>
