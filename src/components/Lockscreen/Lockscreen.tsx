@@ -9,7 +9,7 @@ function Lockscreen({ setAuthenticated }: LockscreenProps) {
     const [password, setPassword] = useState("");
 
     function validatePassword(userInput: string) {
-        let upperInput = userInput.toUpperCase().trim()
+        const upperInput = userInput.toUpperCase().trim();
         if (upperInput == "KRONOS") {
             setAuthenticated(true);
         }

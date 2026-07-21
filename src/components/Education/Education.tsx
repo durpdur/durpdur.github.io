@@ -10,6 +10,7 @@ type CountdownTime = {
     months: number;
     days: number;
     seconds: number;
+    graduated: boolean;
 };
 
 function getCountdownTime(targetDate: string): CountdownTime {
@@ -21,7 +22,8 @@ function getCountdownTime(targetDate: string): CountdownTime {
         return {
             months: 0,
             days: 0,
-            seconds: 0
+            seconds: 0,
+            graduated: true
         };
     }
 
@@ -31,7 +33,8 @@ function getCountdownTime(targetDate: string): CountdownTime {
     return {
         months: Math.floor(totalSeconds / (30.44 * 24 * 60 * 60)),
         days: Math.floor((totalSeconds % (30.44 * 24 * 60 * 60)) / (24 * 60 * 60)),
-        seconds: totalSeconds % 60
+        seconds: totalSeconds % 60,
+        graduated: false
     };
 }
 
@@ -44,8 +47,6 @@ function Education({ education }: EducationProps) {
     const [countdown, setCountdown] = useState(() =>
         getCountdownTime(education.endDate)
     );
-
-    const graduated = new Date(education.endDate).getTime() <= Date.now();
 
     useEffect(() => {
         const interval = window.setInterval(() => {
@@ -76,7 +77,7 @@ function Education({ education }: EducationProps) {
                     <div className={styles.countdown_legend}>SECONDS</div>
                 </div>
 
-                {graduated && (
+                {countdown.graduated && (
                     <div className={styles.graduated_banner}>
                         <div className={styles.graduated_text}>GRADUATED</div>
                     </div>
