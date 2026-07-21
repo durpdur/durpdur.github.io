@@ -27,12 +27,11 @@ function Lockscreen({ setAuthenticated }: LockscreenProps) {
                     className={styles.text_input}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    autoFocus
                     aria-label="Password"
                     autoComplete="off"
                 />
 
-                <div className={styles.display_text} aria-hidden="true">
+                <div className={styles.display_text}>
                     {password || "PASSWORD"}
                     <span className={styles.cursor}></span>
                 </div>

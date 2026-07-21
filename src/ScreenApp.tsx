@@ -22,11 +22,11 @@ function ScreenApp() {
         { icon: CodeIcon, label: "Projects", path: "/projects" },
         { icon: ContactsIcon, label: "Contact", path: "/contact" }
     ];
-    const [authenticated, setAuthenticated] = useState(true);
+    const [authenticated, setAuthenticated] = useState(false);
 
     return (
-        <HashRouter>
-            <main className="app-page">
+        <main className="app-page">
+            <HashRouter>
                 {!authenticated ?
                     (
                         <Lockscreen setAuthenticated={setAuthenticated} />
@@ -38,8 +38,8 @@ function ScreenApp() {
                         />
                     )
                 }
-            </main>
-        </HashRouter>
+            </HashRouter>
+        </main>
     )
 }
 

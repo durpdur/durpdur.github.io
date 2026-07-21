@@ -18,7 +18,9 @@ export default function Monitor() {
                 position={[0, 0, 0]}
                 scale={0.1}
             >
-                <div
+
+                <ScreenApp />
+                {/* <div
                     style={{
                         width: 1000,
                         height: 600,
@@ -29,7 +31,7 @@ export default function Monitor() {
                     onWheel={(event) => event.stopPropagation()}
                 >
                     <ScreenApp />
-                </div>
+                </div> */}
             </Html>
         </group>
     )
