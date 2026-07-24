@@ -1,38 +1,68 @@
-// Monitor.tsx
-import { Html } from '@react-three/drei'
+import { Clone, Html, useGLTF } from '@react-three/drei'
 import ScreenApp from './ScreenApp'
+import { useRef } from 'react'
+import * as THREE from "three";
 
-export default function Monitor() {
+type PositionProp = {
+    position?: [number, number, number]
+}
+
+function Platform({ position = [0, 0, 0] }) {
+    const { scene } = useGLTF('/Platform.glb')
+
+    return (
+        <primitive
+            object={scene}
+            position={position}
+            scale={[1, 1, 1]}
+        />
+    )
+}
+function Path({ position = [0, 0, 0] }: PositionProp) {
+    const { scene } = useGLTF('/Path.glb')
+
+    return <Clone object={scene} position={position} />
+}
+
+
+function Monitor() {
+    const platformHeight = -8;
+
+    const lightTarget = useRef<THREE.Object3D>(null);
+
     return (
         <group>
-            {/* Screen surface */}
-            <mesh position={[0, 0, 0.055]}>
-                <planeGeometry args={[3, 1.8]} />
-                <meshBasicMaterial color="#fff" />
-            </mesh>
-
             {/* React interface */}
             <Html
                 transform
                 center
-                position={[0, 0, 0]}
-                scale={0.1}
+                occlude="blending"
+                scale={1.5}
+                position={[0, 0, -5]}
             >
-
                 <ScreenApp />
-                {/* <div
-                    style={{
-                        width: 1000,
-                        height: 600,
-                        overflow: 'hidden',
-                        background: '#fff',
-                    }}
-                    onPointerDown={(event) => event.stopPropagation()}
-                    onWheel={(event) => event.stopPropagation()}
-                >
-                    <ScreenApp />
-                </div> */}
             </Html>
+
+
+            <spotLight
+                position={[0, 0, -4]}
+                target={lightTarget.current ?? undefined}
+                color="#7fc8ff"
+                intensity={100}
+                distance={25}
+                angle={Math.PI / 3}
+                penumbra={0.8}
+                decay={2}
+            />
+
+            <Platform position={[0, platformHeight, 0]} />
+            <Path position={[0, platformHeight, 3]} />
+            <Path position={[0, platformHeight, 6]} />
+            <Path position={[0, platformHeight, 9]} />
+            <Path position={[0, platformHeight, 12]} />
+            <Path position={[0, platformHeight, 15]} />
         </group>
     )
 }
+
+export default Monitor;

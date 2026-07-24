@@ -1,12 +1,13 @@
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
 import Monitor from './Monitor'
+
 
 function App() {
     return (
-        <Canvas>
+        <Canvas style={{ backgroundColor: "black" }} camera={{ position: [0, -3, 30], fov: 50 }}>
+            <ambientLight intensity={0.1} />
+            <directionalLight position={[0, 5, 0]} />
             <Monitor />
-            <OrbitControls />
         </Canvas>
     )
 }
