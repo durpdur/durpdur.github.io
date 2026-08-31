@@ -1,6 +1,7 @@
 import styles from "./Education.module.css";
 import type { EducationData } from "../../types/portfolio_data_types.ts";
 import { useEffect, useState } from "react";
+import HomeButton from "../HomeButton/HomeButton.tsx";
 
 type EducationProps = {
     education: EducationData;
@@ -84,6 +85,7 @@ function Education({ education }: EducationProps) {
                 )}
             </div>
             <div className={styles.title}>UNTIL GRADUATION</div>
+            <HomeButton placement="bottomRight" />
         </div>
     );
 }

@@ -38,7 +38,8 @@ function Monitor() {
                 center
                 occlude="blending"
                 scale={1.5}
-                position={[0, 0, -5]}
+                position={[0, 1, -10]}
+                rotation={[Math.PI / 32, 0, 0]}
             >
                 <ScreenApp />
             </Html>

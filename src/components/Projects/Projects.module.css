@@ -8,8 +8,6 @@
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 1fr 10fr 1fr;
-
-  animation: mount 0.5s linear;
 }
 
 /* Project Header */
@@ -84,14 +82,3 @@
 }
 
 /* Project Footer */
-
-/* Animation */
-@keyframes mount {
-  0% {
-    grid-template-rows: 1fr 8fr 1fr;
-  }
-
-  100% {
-    grid-template-rows: 1fr 10fr 1fr;
-  }
-}

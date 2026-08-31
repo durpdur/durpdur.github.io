@@ -3,6 +3,7 @@ import styles from "./WorkExperience.module.css";
 import type { ExperienceData } from "../../types/portfolio_data_types";
 import SkillCardCarousel from "../SkillCards/SkillCard";
 import KeyHint from "../KeyHint/KeyHint";
+import HomeButton from "../HomeButton/HomeButton";
 
 type WorkExperienceProps = {
     experiences: ExperienceData[];
@@ -111,6 +112,7 @@ function WorkExperience({ experiences, technicalSkills }: WorkExperienceProps) {
                     <div className={styles.legend_sub}>
                         {experience.startDate} - {experience.endDate}
                     </div>
+                    <HomeButton placement="bottomRight" />
                 </div>
             </div>
         </div>

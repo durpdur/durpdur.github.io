@@ -4,6 +4,7 @@ import SkillCardCarousel from "../SkillCards/SkillCard";
 
 import styles from "./Projects.module.css";
 import GitHubIcon from '@mui/icons-material/GitHub';
+import HomeButton from "../HomeButton/HomeButton";
 
 type ProjectsProps = {
     projects: ProjectData[];
@@ -94,6 +95,7 @@ function Projects({ projects, technicalSkills }: ProjectsProps) {
                 <div></div>
                 <div className={styles.project_footer}></div>
                 <div></div>
+                <HomeButton placement="bottomRight" />
             </div>
         </div>
     );

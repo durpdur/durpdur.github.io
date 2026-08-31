@@ -5,6 +5,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import HomeButton from "../HomeButton/HomeButton";
 
 type AboutProps = {
     personal: PersonalData;
@@ -15,7 +16,8 @@ function About({ personal }: AboutProps) {
     return (
         <div className={styles.wrapper}>
 
-            <div className={styles.header_left}></div>
+            <div className={styles.header_left}>
+            </div>
             <div className={styles.header_right}></div>
 
             <div className={styles.main_left}>
@@ -44,7 +46,7 @@ function About({ personal }: AboutProps) {
 
             <div className={styles.footer_left}></div>
             <div className={styles.footer_right}></div>
-
+            <HomeButton placement="bottomRight" />
         </div>
     );
 }

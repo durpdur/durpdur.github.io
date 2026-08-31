@@ -1,0 +1,87 @@
+.home_button {
+  --home-button-color: #000;
+  --home-button-focus-ring: var(--error-color);
+
+  position: absolute;
+  z-index: 10;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: 3rem;
+  block-size: 3rem;
+  color: var(--home-button-color);
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.home_button:hover {
+  outline: 1px solid currentColor;
+}
+
+.home_button:focus-visible {
+  outline: 2px solid var(--home-button-focus-ring);
+  outline-offset: 0.25rem;
+}
+
+.home_button:active {
+  animation: buttonClick 200ms ease;
+}
+
+.icon_svg {
+  height: 2rem;
+  width: 2rem;
+  flex: 0 0 auto;
+}
+
+.inline {
+  position: relative;
+}
+
+.bottomLeft,
+.bottomRight {
+  position: absolute;
+  bottom: 0;
+  margin: 1rem;
+}
+
+.bottomLeft {
+  left: 0;
+}
+
+.bottomRight {
+  right: 0;
+}
+
+@media (max-width: 480px) {
+  .home_button {
+    inline-size: 2.75rem;
+    block-size: 2.75rem;
+  }
+
+  .icon_svg {
+    height: 1.75rem;
+    width: 1.75rem;
+  }
+
+  .bottomLeft,
+  .bottomRight {
+    margin: 0.75rem;
+  }
+}
+
+.dark {
+  --home-button-color: #000;
+}
+
+.light {
+  --home-button-color: #fff;
+  --home-button-focus-ring: #fff;
+}
+
+@keyframes buttonClick {
+  50% {
+    transform: scale(0.95) translateY(0.3rem);
+  }
+}

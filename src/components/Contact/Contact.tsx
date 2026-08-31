@@ -6,6 +6,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import HomeButton from "../HomeButton/HomeButton";
 
 type ContactProps = {
     personal: PersonalData;
@@ -49,6 +50,7 @@ function Contact({ personal }: ContactProps) {
 
             <div className={styles.footer}></div>
             <div className={styles.footer}></div>
+            <HomeButton placement="bottomRight" />
         </div>
     );
 }
