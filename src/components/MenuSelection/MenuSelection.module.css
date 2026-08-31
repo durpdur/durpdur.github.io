@@ -1,17 +1,15 @@
 .menuSelection_wrapper {
-  background-color: var(--primary-color);
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: contents;
 }
 
 .menu_wrapper {
+  grid-column: 1 / -1;
+  grid-row: 2;
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   padding-left: 30vw;
 }
 
@@ -57,24 +55,4 @@
   background-color: rgba(103, 124, 122, 0.5);
   font-family: "Eurostile";
   font-weight: 500;
-}
-
-/* Dividers */
-.menuSelection_wrapper::before,
-.menuSelection_wrapper::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background-color: #fff;
-  pointer-events: none;
-}
-
-.menuSelection_wrapper::before {
-  left: calc(30vw - 3px);
-}
-
-.menuSelection_wrapper::after {
-  left: calc(30vw + 96px);
 }

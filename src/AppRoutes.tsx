@@ -8,6 +8,7 @@ import Contact from "./components/Contact/Contact";
 import type { MenuItem } from "./types/menu_types";
 import type { PortfolioData } from "./types/portfolio_data_types";
 import About from "./components/About/About";
+import ScreenFrame from "./components/ScreenFrame/ScreenFrame";
 
 type AppRoutesProps = {
     menuItems: MenuItem[];
@@ -17,15 +18,17 @@ type AppRoutesProps = {
 function AppRoutes({ menuItems, portfolioData }: AppRoutesProps) {
     return (
         <Routes>
-            <Route
-                path="/"
-                element={<MenuSelection MENU_ITEMS={menuItems} />}
-            />
-            <Route path="/info" element={<About personal={portfolioData.personal} education={portfolioData.education} />} />
-            <Route path="/education" element={<Education education={portfolioData.education} />} />
-            <Route path="/work" element={<WorkExperience experiences={portfolioData.experiences} technicalSkills={portfolioData.technicalSkills} />} />
-            <Route path="/projects" element={<Projects projects={portfolioData.projects} technicalSkills={portfolioData.technicalSkills} />} />
-            <Route path="/contact" element={<Contact personal={portfolioData.personal} />} />
+            <Route element={<ScreenFrame />}>
+                <Route
+                    path="/"
+                    element={<MenuSelection MENU_ITEMS={menuItems} />}
+                />
+                <Route path="/info" element={<About personal={portfolioData.personal} education={portfolioData.education} />} />
+                <Route path="/education" element={<Education education={portfolioData.education} />} />
+                <Route path="/work" element={<WorkExperience experiences={portfolioData.experiences} technicalSkills={portfolioData.technicalSkills} />} />
+                <Route path="/projects" element={<Projects projects={portfolioData.projects} technicalSkills={portfolioData.technicalSkills} />} />
+                <Route path="/contact" element={<Contact personal={portfolioData.personal} />} />
+            </Route>
         </Routes>
     );
 }

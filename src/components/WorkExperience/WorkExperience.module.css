@@ -1,24 +1,9 @@
 .wrapper {
-  height: 100vh;
+  display: contents;
 }
 
 .card {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 3fr 1fr;
-}
-
-.card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 1px;
-  background-color: #fff;
-  transform: translateX(-50%);
-  pointer-events: none;
+  display: contents;
 }
 
 /* Title */

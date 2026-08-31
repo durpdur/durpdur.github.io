@@ -60,8 +60,10 @@ function Education({ education }: EducationProps) {
 
     return (
         <div className={styles.wrapper}>
-            <div className={styles.title}>{education.institution.toUpperCase()}</div>
-            <div className={styles.subtitle}>{education.degree.toUpperCase()}</div>
+            <div className={styles.education_header}>
+                <div className={styles.title}>{education.institution.toUpperCase()}</div>
+                <div className={styles.subtitle}>{education.degree.toUpperCase()}</div>
+            </div>
 
             <div className={styles.countdown_wrapper}>
                 <div className={styles.countdown_grid}>

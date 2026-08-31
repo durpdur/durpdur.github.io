@@ -1,8 +1,5 @@
 .wrapper {
-  display: grid;
-  height: 100vh;
-  grid-template-rows: 1fr 8fr 1fr;
-  grid-template-columns: 3fr 2fr;
+  display: contents;
 }
 
 /* HEADER */
