@@ -3,6 +3,7 @@
 
 .project_wrapper {
   height: 100vh;
+  width: 100vw;
   background-color: var(--primary-color);
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
